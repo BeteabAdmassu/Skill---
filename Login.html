@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/login.css">
+    <title>Login Page | 2022Ec</title>
+</head>
+<body>
+    <div class="allpage">
+        <div class="loginpage" id="page">
+            <div class="upper">
+                <a class="btn" id="login" onclick="log()"><span id="span-filler"></span> Login</a>
+                <a class="btn" id="Sign" onclick="Sign()">Sign Up</a>
+            </div>
+            <form action="file.php" class="formone" id="form1">
+                <div class="input-user-image">
+                    <div class="user-icon">
+                        <img src="/images/user_shield_40px.png" alt="">
+                    </div>
+                    <input onkeydown="down()" type="text" name="username" id="username" class="same" placeholder="Username" required>
+                </div>
+                <div class="input-key-image">
+                    <div class="key-icon">
+                        <img src="/images/key_40px.png" alt="">
+                    </div>
+                    <input onkeyup="up()" type="password" name="password" id="password" class="same" placeholder="Password" required>
+                </div>
+                <input type="submit" value="Login" class="sub">
+                <div class="foot">
+                    <p>Dont have an Account</p>
+                    <a href="#" onclick="Sign()">Sgin Up</a>
+                </div>
+            </form>
+            <form action="file.php" class="formtwo" id="form2">
+                <div class="input-user-image">
+                    <div class="user-icon">
+                        <img src="/images/user_shield_40px.png" alt="">
+                    </div>
+                    <input onkeydown="down()" type="text" name="username" id="username" class="same" placeholder="Username" required>
+                </div>
+                <div class="input-key-image">
+                    <div class="key-icon">
+                        <img src="/images/key_40px.png" alt="">
+                    </div>
+                    <input onkeyup="up()" type="password" name="password" id="password" class="same" placeholder="Password" required>
+                </div>
+                <div class="input-email-image">
+                    <div class="email-icon">
+                        <img src="/images/important_mail_40px.png" alt="">
+                    </div>
+                    <input onkeyup="up()" type="email" name="email" id="password" class="same" placeholder="Email" required>
+                </div>
+                <article class="article">
+                    <input type="checkbox" name="check" id="checkbox" class="check">
+                    <p>I accept terms and policies</p>
+                </article>
+                <input type="submit" value="Sgin Up" class="sub">
+            </form>
+        </div>
+    </div>
+    <script src="/index.js"></script>
+</body>
+</html>
