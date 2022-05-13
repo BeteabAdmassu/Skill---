@@ -1,0 +1,1638 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+}
+.navigation
+{
+    width: 100%;
+    height: 85px;
+    background-color: #363535;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navigation .left
+{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 100%;
+}
+.navigation .left li 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation .left li a
+{
+    text-decoration: none;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    margin-left: 20px;
+}
+.middle
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    width: 55%;
+    height: 100%;
+    position: relative;
+}
+.middle li
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.middle li img
+{
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+.middle li a
+{
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    padding: 5px;
+}
+.middle li a .samespan
+{
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    height: 4px;
+    background-color: red;
+    border-radius: 5px;
+    margin-top: 5px;
+    transition: .5s all linear;
+}
+.middle li:hover a .samespan
+{
+   width: 100%;
+}
+.navigation .right
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    list-style: none;
+}
+.navigation .right li:nth-of-type(4)
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navigation .right li img
+{
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+}
+.navigation .right li a
+{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+.navigation .right li
+{
+    margin: 0 10px;
+}
+.navigation .right li:nth-of-type(1) a
+{
+    padding: 10px;
+    border: 1px solid #fff;
+    width: 150px;
+    transition: .5s all linear;
+}
+.navigation .right li:nth-of-type(1):hover a
+{
+    background-color: white;
+    color: #000;
+    border: 1px solid transparent;
+}
+.navigation .right li:nth-of-type(2),
+.navigation .right li:nth-of-type(3)
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.navigation .right li:nth-of-type(2) img,
+.navigation .right li:nth-of-type(3) img
+{
+    transition: .5s all linear;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.navigation .right li:nth-of-type(2):hover img,
+.navigation .right li:nth-of-type(3):hover img
+{
+    border: 1px solid #fff;
+}
+.navigation .right li:nth-of-type(4) img
+{
+    width: 20px;
+    height: 20px;
+}
+.navigation .menu
+{
+    position: absolute;
+    right: 0;
+    display: none;
+}
+/* this about the main section of the content */
+.main
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: blue;
+    padding-top: 100px;
+    background-color: #000;
+}
+.main h1
+{
+    font-size: 55px;
+    margin: 10px auto;
+    font-weight: 600;
+    font-family: 'Poppins',sans-serif;
+    color: white;
+}
+.main p 
+{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    color: white;
+    margin: 15px auto;
+}
+.main .samebtn
+{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    border: .5px solid white;
+    padding: 12px;
+    border-radius: 3px;
+    margin: 10px;
+    width: 180px;
+    display: inline-block;
+}
+.main a:nth-of-type(1)
+{
+    background: linear-gradient(to left ,#e25e20, #ff3cce);
+}
+.imagesundermain
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 15px;
+}
+.imagesundermain img
+{
+    margin: 0 60px;
+    border: 1px solid transparent;
+    transition: .5s all linear;
+    cursor: pointer;
+    padding: 10px;
+}
+.imagesundermain img:hover
+{
+    border: 1px solid #fff;
+}
+.main2
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0;
+    background-color: #000;
+}
+.main2 .divmiddle
+{
+    width: 7px;
+    height: 180px;
+    background: linear-gradient(to right, #e25e20, #ff3cce);
+    border-radius: 5px;
+}
+.main3
+{
+    width: 100%;
+    background-color: #000;
+    height: 100%;
+}
+.maindiv
+{
+    margin: 30px auto;
+    display: grid;
+    width: 70%;
+    grid-template-columns: repeat(2, 1fr);
+}
+.firstmain
+{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 15px;
+    background-color: #363535;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .5s all linear;
+}
+.firstmain:hover
+{
+    box-shadow: 0 0 10px 0 #fff;
+}
+.fleft p:nth-of-type(1){
+    color: #ff3cce;
+    font-weight: 600;
+}
+.fleft p
+{
+    margin: 10px 0;
+    font-weight: 600;
+    font-family: 'Poppins',sans-serif;
+    color: white;
+}
+.fleft a
+{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    text-decoration: none;
+    color: white;
+}
+.fleft a img
+{
+    width: 15px;
+    height: 15px;
+    margin-left: 0px;
+}
+.section
+{
+    width: 100%;
+    background-color: #000;
+    height: 100%;
+    margin-top: -30px;
+}
+.twopage
+{
+    width: 100%;
+    background-color: #000;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    position: relative;
+}
+.section .left
+{
+    width: 50%;
+    height: 100%;
+    background-color: #333;
+    align-self: center;
+    padding: 25.5px;
+    margin-left: 15px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.section .left h1,
+.section .left p,
+.section .left h3
+{
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+.section .left p:nth-of-type(3)
+{
+    font-size: 38px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 15px auto;
+}
+.section .left p:nth-of-type(4)
+{
+    font-weight: 400;
+    font-family: 'Poppins',sans-serif;
+    color: white;
+}
+.section .left a
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    margin: 50px 0;
+    text-align: left;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+.section .left a img
+{
+    transition: .5s all linear;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    transform: translateX(0);
+}
+.section .left a:hover img
+{
+    transform: translateX(10px);
+}
+.section .right
+{
+    background-color: #333;
+    width: 50%;
+    margin-right: 15px;
+    /* height: 100%; */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 400px;
+}
+.section .right img
+{
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.box3
+{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+.box3 .prep h2,
+.box3 .prep p,
+.box3 .prep a,
+.box3 .module h2,
+.box3 .module p,
+.box3 .module a,
+.box3 .sand h2,
+.box3 .sand p,
+.box3 .sand a
+{
+    color: white;
+}
+.box3
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 495px;
+    width: 100%;
+    padding: 15px;
+}
+.box3 .prep,
+.box3 .module,
+.box3 .sand
+{
+    background-color: #141414;
+    border-radius: 10px;
+    height: 100%;
+    margin: 0 15px;
+    width: 33.333%;
+    padding: 25px;
+}
+.box3 .prep h2,
+.box3 .module h2,
+.box3 .sand h2
+{
+    display: flex;
+    align-items: center;
+}
+.box3 .prep img,
+.box3 .module img,
+.box3 .sand img
+{
+    margin-right: 10px;
+}
+.box3 .prep p:nth-of-type(1),
+.box3 .module p:nth-of-type(1),
+.box3 .sand p:nth-of-type(1)
+{
+    margin-top:30px ;
+    line-height: 1.4;
+    font-family: 'Poppins',sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+.box3 .prep p:nth-of-type(2),
+.box3 .module p:nth-of-type(2),
+.box3 .sand p:nth-of-type(2)
+{
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+.box3 .prep a,
+.box3 .module a,
+.box3 .sand a
+{
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.box3 .prep a img,
+.box3 .module a img,
+.box3 .sand a img
+{
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+/* Box4 */
+.box4
+{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    padding: 15px;
+    overflow: hidden;
+}
+.box4 .skillone h1,
+.box4 .skilltwo h1,
+.box4 .skillthree h1,
+.box4 .skillfour h1
+{
+    color: white;
+    font-size: 20px;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 15px 0;
+}
+.box4 .skillone p,
+.box4 .skilltwo p,
+.box4 .skillthree p,
+.box4 .skillfour p
+{
+    color: white;
+}
+.box4 h2,
+.box4 h1
+{
+    color: white;
+    text-align: left;
+    display: block;
+    width: 100%;
+}
+.box4 h2
+{
+    margin: 50px 0 0 50px;
+}
+.box4 h1
+{
+    margin-left: 50px;
+}
+.skillboxcontainer
+{
+    width: 100%;
+    height: 100%;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.box4 .skillone,
+.box4 .skilltwo,
+.box4 .skillthree,
+.box4 .skillfour
+{
+    width: 22%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #141414;
+    padding: 15px;
+    margin: 0 15px;
+    transition: .5s all linear;
+}
+/*this the hover effect on each boxes*/
+.box4 .skillone:hover,
+.box4 .skilltwo:hover,
+.box4 .skillthree:hover,
+.box4 .skillfour:hover
+{
+    box-shadow: 0 0 10px 0 #f5f5f5;
+    cursor: pointer;
+}
+.box4 .skillone:hover img,
+.box4 .skilltwo:hover img,
+.box4 .skillthree:hover img,
+.box4 .skillfour:hover img
+{
+    transform: translate3d(5px,5px,5px);
+}
+.box4 .skillone img,
+.box4 .skilltwo img,
+.box4 .skillthree img,
+.box4 .skillfour img
+{
+    perspective: 300px;
+    transition: .5s all ease-in-out;
+    cursor: pointer;
+    width: 100%;
+}
+/* this section is about the box5 css */
+.box5
+{
+    width: 100%;
+    height: 500px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.box5 .left
+{
+    width: 60%;
+    height: 100%;
+}
+.box5 .left img
+{
+    width: 100%;
+    height: 100%;
+    /* border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; */
+}
+.box5 .right
+{
+    width: 40%;
+    height: 100%;
+    /* border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; */
+    background: linear-gradient(to left, #ff2676 25%, #ff4726 100%);
+}
+.box5 .right span
+{
+    font-weight: 700;
+    font-family: 'Poppins',sans-serif;
+}
+.box5 .right h2,
+.box5 .right p
+{
+    color: white;
+    margin-left: 75px;
+}
+.box5 .right p
+{
+    font-weight: 600;
+}
+.box5 h2
+{
+    margin-top: 100px;
+}
+.box5 .right p
+{
+    color: white;
+    margin-top: 25px;
+}
+.box5 .right a
+{
+    text-decoration: none;
+    color: white;
+    background-color: #000;
+    display: block;
+    margin: 50px;
+    width: 250px;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 18px; 
+    transition: .5s all linear;
+}
+.box5 .right a:hover
+{
+    box-shadow: 0 0 15px 0 rgba(0,0,0,.5);
+}
+/* this css is about the the seven section *
+/* image slider css is not done*/
+
+.box8
+{
+    width: 100%;
+    height: 600px;
+    background-image: url(/pexels-pixabay-371985.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.box8 .information
+{
+    z-index: 100;
+    width: 60%;
+    margin-left: 50px;
+}
+.box8 .information h1:nth-of-type(2)
+{
+    font-size: 50px;
+    line-height: 1.2;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+.box8 .information p
+{
+    font-weight: 600;
+    font-family: 'Poppins',sans-serif;
+}
+.box8 .information a
+{
+    padding: 10px;
+    border: 1px solid #fff;
+    text-align: center;
+    text-decoration: none;
+    width: 180px;
+    margin: 25px 0;
+    display: block;
+    transition: .5s all linear;
+}
+.box8 .information a:hover
+{
+    background-color: #000;
+    color: #fff;
+}
+.box8 .information h1,
+.box8 .information p,
+.box8 .information a
+{
+    color: #000;
+    margin: 25px 0;
+}
+.box9
+{
+    width: 100%;
+    height: 300px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.box9 h1
+{
+    font-size: 35px;
+    font-family: 'Poppins';
+
+}
+.box9 h1,
+.box9 a
+{
+    color: #fff;
+    margin: 0 150px;
+}
+.box9 a
+{
+    padding: 12px;
+    width: 180px;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(to left, #ff2676 25%, #ff4726 100%);
+    transition: .5s all linear;
+}
+.box9 a:hover
+{
+    background: linear-gradient(to left, #ff2676 50%, #ff4726 100%);   
+}
+.box10
+{
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column ;
+    padding-top: 75px;
+}
+.box10 > a
+{
+    color: #fff;
+}
+.gridboxes
+{
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(5,fr);
+    grid-template-rows: repeat(5,fr);
+    grid-template-areas: 'ONE TWO THREE FOUR FIVE';
+}
+.gridboxes a
+{
+    color: #635e5e;
+    display: block;
+    margin: 20px;
+    text-align:center;
+    font-size: 13px;
+    font-family: 'Poppins',sans-serif;
+    font-family: 600;
+    transition: .2s all linear;
+    cursor: pointer;
+}
+.gridboxes a:nth-of-type(1)
+{
+    margin-top: 50px;
+}
+.gridboxes a:hover
+{
+    color: #fff;
+}
+
+#SOLUTIONS
+{
+    grid-area: ONE;
+}
+#PLATFORM
+{
+    grid-area: TWO;
+}
+#COMPANY
+{
+    grid-area: THREE;
+}
+#RESOURCES
+{
+    grid-area: FOUR;
+}
+#SUPPORT
+{
+    grid-area: FIVE;
+}
+.gridboxes .same
+{
+    width: 100%;
+    height: 100%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; */
+}
+.gridboxes .same p
+{
+    color: white;
+    text-align: center;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+}
+#gridmiddle
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+#gridmiddle img
+{
+    margin-left: 40px;
+}
+#gridmiddle p{
+    margin: 0 15px;
+    color: white;
+}
+.thirdgrid
+{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+.thmid
+{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.thmid a{
+    margin: 0 15px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    width: 180px;
+}
+.thmid p
+{
+    margin: 0 15px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    width: 380px;
+}
+.socialmidea
+{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+.socialmidea img
+{
+    width: 20px;
+    margin: 0 20px;
+}
+.thgrid
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 40%;
+    padding: 15px;
+}
+.thgrid p
+{
+    color: white;
+    font-size: 13px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+}
+/* Media query */
+@media screen and (max-width: 768px) {
+    .navigation
+    {
+        /* position: absolute;
+        left: 0;
+        top: 0; */
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+    }
+    .navigation .menu
+    {
+        display: flex;
+        right: 20px;
+        top: 20px;
+    }
+    .left
+    {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin-left: 15px;
+        width: 70%;
+        height: 300px;
+        margin-top: 15px;
+    }
+    .left li
+    {
+        margin-top: 50px;
+        margin-left: 100px;
+    }
+    .middle
+    {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        list-style: none;
+        flex-direction: column;
+        margin: 12px;
+        margin-left: 50px;
+        width: 80%;
+        height: 250px;
+        margin-top: 20px;
+        left: 0%;
+    }
+    .middle li
+    {
+        width: 100%;
+        padding: 5px;
+        margin: 3px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 4px;
+        transition: .5s all linear;
+    }
+    .middle li img
+    {
+        transition: .5s all linear;
+    }
+    .middle li:hover img
+    {
+        filter: brightness(.5) invert(1);
+    }
+    .middle li:hover
+    {
+        background-color: white;
+    }
+    .middle li:hover a
+    {
+        color: #000;
+    }
+    .navigation .right
+    {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin: 10px 0;
+        width: 70%;
+        margin-left: 15px;
+        margin-top: 50px;
+    }
+    .navigation .right .pink
+    {
+        margin-top: 25px;
+        width: 100%;
+        padding: 10px;
+        margin-left: 50px;
+        padding: 20px;
+        transition: .5s all linear;
+        /* background-color: white; */
+    }
+    .navigation .right .pink:hover
+    {
+        background-color: white;
+    }
+    .navigation .right .pink:hover img
+    {
+        filter: brightness(.5) invert(1);
+    }
+    .navigation.right .pink img
+    {
+        transition: .5s all linear;
+    }
+    .navigation.right img
+    {
+        position: absolute;
+        left: 20%;
+    }
+    .navigation .right .imageinside
+    {
+        position: relative;
+    }
+    .navigation .right li:nth-of-type(1)
+    {
+        margin-top: 40px;
+    }
+    .navigation .right li:nth-of-type(4)
+    {
+        width: 90%;
+        padding: 15px;
+        margin-top: 70px;
+        margin-left: 60px;
+    }
+    .trywidth
+    {
+        width: 90%;
+    }
+    .navigation .right li .tryforfree
+    {
+        width: 100%;
+        border: 1px solid red;
+        display: block;
+        margin-left: 100px;
+    }
+    .main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+    .main h1
+    {
+        font-size: 30px;
+    }
+    .main p
+    {
+        text-align: center;
+    }
+    .main .btn
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .main p:nth-of-type(2)
+    {
+        font-size: 15px;
+        text-align: center;
+    }
+    .main .imagesundermain
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .maindiv
+    {
+        margin: 30px auto;
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /* this is sectio four */
+    .twopage
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .twopage .left
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 50%;
+        margin: 0 15px;
+    }
+    .section .left h1,
+    .section .left p,
+    .section .left h3
+    {
+        color: white;
+        width: 100%;
+        height: 100%;
+    }
+    .section .left p:nth-of-type(1),
+    .section .left p:nth-of-type(2)
+    {
+        display: block;
+    }
+    .section .left p:nth-of-type(3)
+    {
+        font-size: 20px;
+        font-family: 'Poppins',sans-serif;
+        font-weight: 600;
+        line-height: 1.1;
+        margin: 15px auto;
+    }
+    .section .left p:nth-of-type(4)
+    {
+        font-weight: 400;
+        font-family: 'Poppins',sans-serif;
+        color: white;
+    }
+    .section .left a
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 180px;
+        margin: 50px 0;
+        text-align: left;
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .section .left a img
+    {
+        transition: .5s all linear;
+        width: 20px;
+        height: 20px;
+        margin-left: 5px;
+        transform: translateX(0);
+    }
+    .section .left a:hover img
+    {
+        transform: translateX(10px);
+    }
+    .section .right
+    {
+        background-color: #333;
+        width: 100%;
+        /* margin-right: 15px; */
+        height: 50%;
+        /* border-radius: 10px; */
+        /* height: 100%; */
+        position: absolute;
+        top: 90%;
+        /* left: 0; */
+        border-radius: 0;
+    }
+    .section .right img
+    {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* border-radius: 10px; */
+        border-radius: 0;
+    }
+    .box3
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1200px;
+        width: 100%;
+        padding: 15px;
+        flex-direction: column;
+        margin-top: 196px;
+        background-color: #000;
+    }
+    .box3 .prep,
+    .box3 .module,
+    .box3 .sand
+    {
+        background-color: #141414;
+        border-radius: 10px;
+        height: 33.333%;
+        margin: 0 15px;
+        width: 100%;
+        /* padding: 25px; */
+        margin: 10px auto;
+    }
+    .box3 .prep
+    {
+        /* margin-top: 290px; */
+    }
+    .box3 .prep p:nth-of-type(1),
+    .box3 .module p:nth-of-type(1),
+    .box3 .sand p:nth-of-type(1)
+    {
+        margin-top:30px ;
+        line-height: 1.4;
+        font-family: 'Poppins',sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+    }
+        .box4
+    {
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        flex-direction: column;
+        padding: 15px;
+        overflow: hidden;
+    }
+    .box4 .skillone h1,
+    .box4 .skilltwo h1,
+    .box4 .skillthree h1,
+    .box4 .skillfour h1
+    {
+        color: white;
+        font-size: 20px;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 15px 0;
+        color: rgb(255, 186, 14);
+    }
+    .box4 .skillone p,
+    .box4 .skilltwo p,
+    .box4 .skillthree p,
+    .box4 .skillfour p
+    {
+        color: white;
+    }
+    .box4 h2,
+    .box4 h1
+    {
+        color: white;
+        text-align: left;
+        display: block;
+        width: 100%;
+    }
+    .box4 h2
+    {
+        margin: 50px 0 0 50px;
+    }
+    .box4 h1
+    {
+        margin-left: 50px;
+    }
+    .skillboxcontainer
+    {
+        width: 100%;
+        height: 100%;
+        margin: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    .box4 .skillone,
+    .box4 .skilltwo,
+    .box4 .skillthree,
+    .box4 .skillfour
+    {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background-color: #141414;
+        padding: 15px;
+        margin: 15px 5px;
+        transition: .5s all linear;
+    }
+    /*this the hover effect on each boxes*/
+    .box4 .skillone:hover,
+    .box4 .skilltwo:hover,
+    .box4 .skillthree:hover,
+    .box4 .skillfour:hover
+    {
+        box-shadow: 0 0 10px 0 #f5f5f5;
+        cursor: pointer;
+    }
+    .box4 .skillone:hover img,
+    .box4 .skilltwo:hover img,
+    .box4 .skillthree:hover img,
+    .box4 .skillfour:hover img
+    {
+        transform: translate3d(5px,5px,5px);
+    }
+    .box4 .skillone img,
+    .box4 .skilltwo img,
+    .box4 .skillthree img,
+    .box4 .skillfour img
+    {
+        perspective: 300px;
+        transition: .5s all ease-in-out;
+        cursor: pointer;
+        width: 100%;
+    }
+    .box5
+    {
+        width: 100%;
+        height: 725px;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        flex-direction: column;
+    }
+    .box5 .left
+    {
+        width: 100%;
+        height: 50%;
+    }
+    .box5 .left img
+    {
+        width: 100%;
+        height: 100%;
+        /* border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px; */
+    }
+    .box5 .right
+    {
+        width: 100%;
+        height: 50%;
+        /* border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px; */
+        background: linear-gradient(to left, #ff2676 25%, #ff4726 100%);
+    }
+    .box5 .right span
+    {
+        font-weight: 700;
+        font-family: 'Poppins',sans-serif;
+    }
+    .box5 .right h2,
+    .box5 .right p
+    {
+        color: white;
+        margin-left: 25px;
+    }
+    .box5 .right p
+    {
+        font-weight: 600;
+    }
+    .box5 h2
+    {
+        margin-top: 15px;
+    }
+    .box5 .right p
+    {
+        color: white;
+        margin-top: 10px;
+    }
+    .box5 .right a
+    {
+        text-decoration: none;
+        color: white;
+        background-color: #000;
+        display: block;
+        margin: 15px;
+        width: 200px;
+        padding: 10px;
+        font-weight: 600;
+        font-size: 16px; 
+        transition: .5s all linear;
+    }
+    .box5 .right a:hover
+    {
+        box-shadow: 0 0 15px 0 rgba(0,0,0,.5);
+    }
+    .box8
+    {
+        width: 100%;
+        height: 600px;
+        background-image: url(/pexels-pixabay-371985.jpg);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .box8 .information
+    {
+        z-index: 100;
+        width: 100%;
+        margin-left: 50px;
+    }
+    .box8 .information h1:nth-of-type(2)
+    {
+        font-size: 30px;
+        line-height: 1.2;
+        font-family: 'Poppins';
+        font-weight: 600;
+    }
+    .box8 .information p
+    {
+        font-weight: 600;
+        font-family: 'Poppins',sans-serif;
+    }
+    .box8 .information a
+    {
+        padding: 10px;
+        border: 1px solid #fff;
+        text-align: center;
+        text-decoration: none;
+        width: 180px;
+        margin: 25px 0;
+        display: block;
+        transition: .5s all linear;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .box8 .information a:hover
+    {
+        background-color: #000;
+        color: #fff;
+    }
+    .box8 .information h1,
+    .box8 .information p,
+    .box8 .information a
+    {
+        color: #000;
+        margin: 25px 0;
+    }
+    .box9
+    {
+        width: 100%;
+        height: 300px;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .box9 h1
+    {
+        font-size: 17px;
+        display: block;
+        text-align: center;
+        font-family: 'Poppins';
+        width: 100%;
+
+    }
+    .box9 h1,
+    .box9 a
+    {
+        color: #fff;
+        margin: 0 150px;
+    }
+    .box9 a
+    {
+        padding: 10px;
+        width: 150px;
+        text-align: center;
+        text-decoration: none;
+        background: linear-gradient(to left, #ff2676 25%, #ff4726 100%);
+        transition: .5s all linear;
+        margin-top: 40px;
+    }
+    .box9 a:hover
+    {
+        background: linear-gradient(to left, #ff2676 50%, #ff4726 100%);   
+    }
+    .box10
+    {
+        width: 100%;
+        height: 100%;
+        background-color: #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column ;
+        padding-top: 75px;
+    }
+    .box10 > a
+    {
+        color: #fff;
+    }
+    .gridboxes
+    {
+        width: 100%;
+        height: 1100px;
+        display: grid;
+        grid-template-columns: repeat(4,fr);
+        grid-template-rows: repeat(3,fr);
+        grid-template-areas: 'ONE ONE TWO TWO'
+                            'THREE THREE FOUR FOUR'
+                            'FIVE . . .';
+    }
+    .gridboxes a
+    {
+        color: #635e5e;
+        display: block;
+        margin: 20px;
+        text-align:center;
+        font-size: 11px;
+        font-family: 'Poppins',sans-serif;
+        font-family: 600;
+        transition: .2s all linear;
+        cursor: pointer;
+    }
+    .gridboxes a:nth-of-type(1)
+    {
+        margin-top: 50px;
+    }
+    .gridboxes a:hover
+    {
+        color: #fff;
+    }
+
+    #SOLUTIONS
+    {
+        grid-area: ONE;
+    }
+    #PLATFORM
+    {
+        grid-area: TWO;
+    }
+    #COMPANY
+    {
+        grid-area: THREE;
+    }
+    #RESOURCES
+    {
+        grid-area: FOUR;
+    }
+    #SUPPORT
+    {
+        grid-area: FIVE;
+    }
+    .gridboxes .same
+    {
+        width: 100%;
+        height: 100%;
+        /* display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; */
+    }
+    .gridboxes .same p
+    {
+        color: white;
+        text-align: center;
+        font-family: 'Poppins',sans-serif;
+        font-weight: 600;
+    }
+    #gridmiddle
+    {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    #gridmiddle img
+    {
+        margin-left: 40px;
+    }
+    #gridmiddle p{
+        margin: 0 15px;
+        color: white;
+    }
+    .thirdgrid
+    {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+    .thmid
+    {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .thmid a{
+        margin: 0 15px;
+        color: white;
+        text-align: left;
+        text-decoration: none;
+        font-family: 'Poppins',sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        width: 100%;
+        display: block;
+    }
+    .thmid p
+    {
+        margin: 0 15px;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-family: 'Poppins',sans-serif;
+        font-weight: 600;
+        font-size: 11px;
+        width: 100%;
+        display: block;
+    }
+    .socialmidea
+    {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+    }
+    .socialmidea img
+    {
+        width: 20px;
+        margin: 0 20px;
+    }
+    .thgrid
+    {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 15px;
+    }
+    .thgrid img
+    {
+        width: 20px;
+    }
+    .thgrid p
+    {
+        color: white;
+        font-size: 11px;
+        font-family: 'Poppins',sans-serif;
+        font-weight: 600;
+    }
+}
