@@ -9,7 +9,7 @@
          <td><?php echo $row['Lname'];?></td>
      </tr>
      <?php
- }
+                                        }
 
 
 ?>
