@@ -1,0 +1,9 @@
+Username: NaXmWscQNV
+
+Database name: NaXmWscQNV
+
+Password: 4mGy83U85M
+
+Server: remotemysql.com
+
+Port: 3306
