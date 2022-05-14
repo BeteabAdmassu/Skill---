@@ -25,7 +25,7 @@ if($num > 0) {
         extract($row);
 
         $course_item = array(
-            // 'id' => $Id,
+            'Id' => $ID,
             'Name' => $Name,
             'Instructor' => $Instructor,
             'Institute' => $Institute,
