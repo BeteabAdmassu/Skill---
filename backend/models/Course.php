@@ -1,4 +1,8 @@
 <?php
+ 
+
+
+
     class Course {
         private $conn;
         private $table = 'course';
@@ -55,8 +59,40 @@
         $this->Image = $row['Image'];
         $this->Category = $row['Category'];
         $this->Preview_video_link = $row['Preview_video_link'];
-
-        
     }
+
+    
+
+    function search($searchParam) {
+        // select all query
+        $query = "SELECT *
+        FROM
+            " . $this->table . "
+        WHERE
+            Name LIKE ? OR Instructor LIKE ? OR Institute LIKE ? OR Description LIKE ? OR Category LIKE ?";
+
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+
+        // sanitize
+        $searchParam = htmlspecialchars(strip_tags($searchParam));
+        $searchParam = "%{$searchParam}%";
+
+        // bind
+        $stmt->bindParam(1, $searchParam);
+        $stmt->bindParam(2, $searchParam);
+        $stmt->bindParam(3, $searchParam);
+        $stmt->bindParam(4, $searchParam);
+        $stmt->bindParam(5, $searchParam);
+
+        // execute query
+        $stmt->execute();
+
+        return $stmt;
+    }
+    
+
 }  
+
+
 ?>
