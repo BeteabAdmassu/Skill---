@@ -6,9 +6,17 @@ header('Content-Type: application/json');
 include_once '../../config/Database.php';
 include_once '../../models/Course.php';
 
+// frontend\pages
+// header('Location: C:\\xampp\htdocs\Temari-dojo\backend/api/course/courses.php');
+// exit();
+
 // Instantiate Database
 $database = new Database();
 $db = $database->connect();
+
+if(!isset($_COOKIE['user'])) {
+    echo json_encode(array('message' => 'You have to be logged in for this to work'));
+}
 
 // Instantiate Post
 $course = new Course($db);
@@ -41,5 +49,4 @@ if($num > 0) {
 }else {
     echo json_encode(array('message' => 'No courses found'));
 }
-
 ?>

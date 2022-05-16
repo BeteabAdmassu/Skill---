@@ -21,7 +21,6 @@ $course->read_single();
 
 // create array
 $course_arr = array(
- 
     'id' => $course->ID,
     'name' => $course->Name,
     'description' => $course->Description,
@@ -34,6 +33,5 @@ $course_arr = array(
 
 // make JSON
 print_r(json_encode($course_arr));
-
 
 ?>

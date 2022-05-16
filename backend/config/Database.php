@@ -1,10 +1,10 @@
 <?php
     class Database {
         // 'remotemysql.com','NaXmWscQNV', '4mGy83U85M', 'NaXmWscQNV'
-        private $host = "remotemysql.com";
-        private $db_name = "NaXmWscQNV";
-        private $username = "NaXmWscQNV";
-        private $password = "4mGy83U85M";
+        private $host = "localhost";
+        private $db_name = "e-learning platform";
+        private $username = "root";
+        private $password = "";
         public $conn;
 
         public function connect() {
@@ -16,6 +16,7 @@
                 echo "Connection error: " . $exception->getMessage();
             }
             return $this->conn;
+            
         }
     }
         
