@@ -15,7 +15,7 @@
   <div class="container">
    <div class="forms-container">
     <div class="signin-signup">
-     <form action="#" class="sign-in-form">
+     <form action="Signup.php" class="sign-in-form" method="POST">
       <h2 class="title">Sign in</h2>
       <div class="input-field">
        <i class="fas fa-user"></i>
@@ -42,19 +42,19 @@
        </a>
       </div>
      </form>
-     <form action="#" class="sign-up-form">
+     <form action="..\..\backend\api\SIgnIn-SignUp\Signup.php" method="post" class="sign-up-form">
       <h2 class="title">Sign up</h2>
       <div class="input-field">
        <i class="fas fa-user"></i>
-       <input type="text" placeholder="Username" />
+       <input type="text" placeholder="Username" name="username" value="username "/>
       </div>
       <div class="input-field">
        <i class="fas fa-envelope"></i>
-       <input type="email" placeholder="Email" />
+       <input type="email" placeholder="Email"  name="Email" />
       </div>
       <div class="input-field">
        <i class="fas fa-lock"></i>
-       <input type="password" placeholder="Password" />
+       <input type="password" placeholder="Password"  name="Password"/>
       </div>
       <input type="submit" class="btn" value="Sign up" />
       <p class="social-text">Or Sign up with social platforms</p>
