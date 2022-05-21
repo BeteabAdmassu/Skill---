@@ -34,14 +34,21 @@ class Signin {
         $stmt->bindParam(':email', $this->email);
         $stmt->bindParam(':password', $this->password);
            
-      
-      
-
-        // Execute query
-        $stmt->execute();
 
         // Execute query
         if($stmt->execute()) {
+            $num=$stmt->rowCount();
+            if($num>0){
+                $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                // set properties
+                $this->userid = $row['userid'];
+                echo $this->userid;
+
+                return true;
+            }
+            else{
+                return false;
+            }
             return true;
         }
 

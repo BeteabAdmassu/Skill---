@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="./HomePage.css">
-	<title>Temari Elearning website | 2022Ec</title>
+	<title>Temari Elearning Website | 2022Ec</title>
 </head>
 <body>
 		<div class='page'>
@@ -198,3 +198,5 @@
 		</div>
 </body>
 </html>
+
+

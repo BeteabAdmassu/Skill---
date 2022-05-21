@@ -7,10 +7,10 @@
 }
 body
 {
-	width: 100%;
+	/* width: 100%;
 	height: 100vh;
 	background-color: white;
-	overflow: hidden;
+	overflow: scroll; */
 }
 .page
 {
@@ -29,7 +29,7 @@ body
 	border-radius: 20px;
 	background-color: #000;
 	margin-left: 80px;
-	height: 90%;
+	height: fit-content;
 	padding: 30px;
 	padding-bottom: 15px;
 	width: 160px;
