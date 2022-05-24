@@ -89,8 +89,8 @@
     </nav>
     <div class="firstpage">
         <div class="text">
-            <h1>Save big.Learn big.</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolorem in quae, dolorum ex facere!</p>
+            <h1>Access anytime anywhere</h1>
+            <p>Join our small monthly subscription plan for an unlimited access on any device.</p>
         </div>
     </div>
     <div class="sectionvideo">
