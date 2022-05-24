@@ -285,6 +285,12 @@ ul.right li:nth-of-type(3) a
     width: 90%;
     display: block;
 }
+
+.vid-box{
+    overflow: auto;
+}
+
+
 .fotter
 {
     width: 100%;
