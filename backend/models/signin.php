@@ -39,17 +39,17 @@ class Signin {
         if($stmt->execute()) {
             $num=$stmt->rowCount();
             if($num>0){
-                $row = $stmt->fetch(PDO::FETCH_ASSOC);
-                // set properties
-                $this->userid = $row['userid'];
-                echo $this->userid;
+                // $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                // // set properties
+                // $this->userid = $row['userid'];
+                // echo $this->userid;
 
                 return true;
             }
             else{
                 return false;
             }
-            return true;
+           
         }
 
         // Print error if something goes wrong

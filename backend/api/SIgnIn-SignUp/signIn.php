@@ -20,15 +20,14 @@ header('Access-Control-Allow-Origin: *');
   // Get raw posted data
   $data = json_decode(file_get_contents("php://input"));
 
-  $Signin->email = $_POST['Email'];
-  $Signin->password = $_POST['Password'];
+  $Signin->email = $_POST['email'];
+  $Signin->password = $_POST['password'];
 
 
   //Create post
   if($Signin->authenticate()) { 
-    echo json_encode(
-      array('message' => 'Login Successful')
-    );
+    header("Location: http://localhost/Temari-dojo/HomePage.php");
+    die();
   } else {
     echo json_encode(
       array('message' => 'Login Failed')

@@ -21,8 +21,8 @@
   $data = json_decode(file_get_contents("php://input"));
 
   $Signup->username = $_POST['username'];
-  $Signup->email = $_POST['Email'];
-  $Signup->password = $_POST['Password'];
+  $Signup->email = $_POST['email'];
+  $Signup->password = $_POST['password'];
 
  
   //Create post
