@@ -51,16 +51,17 @@
 
 
 
-    function renderVid($name, $instructor, $Preview_video_link) {
+    function renderVid($courseId, $name, $instructor, $Preview_video_link) {
         echo '<div class="vid">
             <div class="videocontaint">
             <iframe width="400" height="200" src='.$Preview_video_link.' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <p>'.$name.'</p>
             <p>Instructor: '.$instructor.'</p>
-            <p><a href="">Go to course</a></p>
+            <p><a href="backend/api/course/course.php?id='.$courseId.'">Go to course</a></p>
         </div>';
     }
+
 
 ?>
 
@@ -122,7 +123,7 @@
                 <?php
                     // iterate through the array of courses
                     foreach($courses_arr['allcourses'] as $course) {
-                        renderVid($course['Name'], $course['Instructor'], $course['Preview_video_link']);
+                        renderVid($course['Id'],$course['Name'], $course['Instructor'], $course['Preview_video_link']);
                     }
                     // renderVid('Introduction to golang', 'Fireship', 'https://www.youtube.com/embed/446E-r0rXHI');
                 ?>
