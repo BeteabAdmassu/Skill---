@@ -1,7 +1,7 @@
 
 <?php
 
-header('Access-Control-Allow-Origin: *');
+  header('Access-Control-Allow-Origin: *');
   header('Content-Type: application/json');
   header('Access-Control-Allow-Methods: POST');
   header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
@@ -23,7 +23,7 @@ header('Access-Control-Allow-Origin: *');
   $Signin->email = $_POST['email'];
   $Signin->password = $_POST['password'];
 
-
+ 
   //Create post
   if($Signin->authenticate()) { 
     header("Location: http://localhost/Temari-dojo/HomePage.php");
@@ -32,5 +32,6 @@ header('Access-Control-Allow-Origin: *');
     echo json_encode(
       array('message' => 'Login Failed')
     );
+  
  }
 ?>

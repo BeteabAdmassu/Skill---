@@ -70,8 +70,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Homepage.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/index.css">
     <title>Temari-Dojo</title>
 </head>
 <body>
@@ -81,14 +80,11 @@
             <li><img src="./assets/image/search_24px.png" alt=""><input type="search" name="search" id="" class="same" placeholder='Search for anything'></li>
         </ul>
         <ul class="right">
-            <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn"> Username<i class="fa-solid fa-user usericon"></i> </button>
-            <div id="myDropdown" class="dropdown-content">
-              <a class="myDropdown-a1" href="setting.php"><i class="fa-solid fa-user-pen usericon2"></i>Edit Profile</a>
-              <a class="myDropdown-a1" href="Login.php"><i class="fa-solid fa-arrow-right-from-bracket usericon2"></i>Logout</a>
-              
-            </div>
-            </div>          
+            <li><span></span><a class='dash' href="#">Dashboard</a></li>
+            <li><span></span><a class='browser' href="#">Browser</a></li>
+            <li class='log'><a class='letter' href="Login.php">Log in</a></li>
+            <li class='sgin'><a href="Signup.php">Sign Up</a></li>
+            <!-- <li><abbr title="User Account"><img src="./assets/image/user_50px.png" alt=""></abbr></li> -->
         </ul>
     </nav>
     <div class="firstpage">

@@ -4,24 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/setting.css">
+    <link rel="stylesheet" href="setting.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Setting</title>
 </head>
 <body>
  <div class="setting-container"> 
      <div class="setting-nav">
-<nav class="nav">
+     <nav class="nav">
         <ul class="left">
-            <li><img src="./assets/image/chevron_up_29px" alt=""><a class='udemy' href="#">Temari Dojo</a></li>
-            <li><img src="./assets/image/search_24px" alt=""><input type="search" name="search" id="" class="same" placeholder='Search for anything'></li>
+            <li><img src="./assets/image/chevron_up_29px.png" alt=""><a class='udemy' href="#">Temari Dojo</a></li>
+            <li><img src="./assets/image/search_24px.png" alt=""><input type="search" name="search" id="" class="same" placeholder='Search for anything'></li>
         </ul>
         <ul class="right">
-            <li><span></span><a class='dash' href="#">Dashboard</a></li>
-            <li><span></span><a class='browser' href="#">Browser</a></li>
-            <li class='log'><a class='letter' href="#">Log in</a></li>
-            <li class='sgin'><a href="#">Sign Up</a></li>
-            <li><abbr title="User Account"><img src="./assets/image/user_50px" alt=""></abbr></li>
+            <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn"> Username<i class="fa-solid fa-user usericon"></i> </button>
+            <div id="myDropdown" class="dropdown-content">
+              <a class="myDropdown-a1" href="setting.php"><i class="fa-solid fa-user-pen usericon2"></i>Edit Profile</a>
+              <a class="myDropdown-a1" href="Login.php"><i class="fa-solid fa-arrow-right-from-bracket usericon2"></i>Logout</a>
+              
+            </div>
+            </div>          
         </ul>
     </nav>
 
@@ -41,7 +44,7 @@
                                
                          </div>
                         
-                         <form class="frm-edit-profile" action="">\
+                         <form class="frm-edit-profile" action="">
                              <div class="frm-edit-1">   
                              <input class="textfield" type="text" name="fname" placeholder="Firstname"></input>
                             <input class="textfield" type="text" name="lname" placeholder="Lastname"></input>
@@ -68,6 +71,24 @@
    
     
 </div>
-
+   <script>
+     function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+   </script>
 </body>
 </html>

@@ -8,15 +8,16 @@ class Signin {
     // properties
     public $email;
     public $password;
+    public $userHash;
 
     public function __construct($db) {
         $this->conn = $db;
         
     }
+    
       //authenticate user
     public function authenticate() {
         // Create query
-       
         $query = 'SELECT * FROM ' . $this->table . ' WHERE email = :email AND password = :password';
          
      
@@ -34,17 +35,14 @@ class Signin {
         $stmt->bindParam(':email', $this->email);
         $stmt->bindParam(':password', $this->password);
            
+        $this->userHash = hash('sha256', $this->email.$this->password);
 
         // Execute query
         if($stmt->execute()) {
             $num=$stmt->rowCount();
             if($num>0){
-                // $row = $stmt->fetch(PDO::FETCH_ASSOC);
-                // // set properties
-                // $this->userid = $row['userid'];
-                // echo $this->userid;
-
-                return true;
+                setcookie("user_cookies",$this->userHash, time() + 3600, '/');
+              return true;
             }
             else{
                 return false;
