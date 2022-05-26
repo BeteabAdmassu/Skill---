@@ -28,9 +28,11 @@
   //Create post
   if($Signup->create()) { 
 
-    echo json_encode(
-      array('message' => 'Post Created')
-    );
+    // echo json_encode(
+    //   array('message' => 'Post Created')
+    // );
+
+    header('localhost/t/Temari-dojo/Login.php');
   } else {
     echo json_encode(
       array('message' => 'Post Not Created')

@@ -3,6 +3,7 @@
     include_once '../../config/Database.php';
     include_once '../../models/Course.php';
 
+
     // Instantiate Database
     $database = new Database();
     $db = $database->connect();
@@ -18,6 +19,13 @@
 
     function renderTag($tag, $content) {
         echo '<'.$tag.'>'.$content.'</'.$tag.'>';
+    }
+    $fuck = 'Fuck';
+    function enrollNow($id) {
+        echo ' 
+        <a class="enroll" href="enroll.php?crsId='.$id.'&stdId='.$_COOKIE['user'].'">
+            <strong>Enroll this course now</strong> 
+        </a>';
     }
 ?>
 
@@ -50,7 +58,7 @@
     <span class="course-title"><i><?php renderTag('h1',$course -> Name); ?></i></span>
     <p><?php renderTag('p', $course -> Description); ?></p>
     <p>Instructor(s): <?php renderTag('a', $course -> Instructor); ?> </p>
-    <a class="enroll" href=""><strong>Enroll this course now</strong> </a>
+    <?php enrollNow($course -> id); ?>
 </article>
 
 <article class="course-review-vid">

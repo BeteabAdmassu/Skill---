@@ -8,6 +8,7 @@ class Signin {
     // properties
     public $email;
     public $password;
+    public $userid;
 
     public function __construct($db) {
         $this->conn = $db;
@@ -39,7 +40,8 @@ class Signin {
         if($stmt->execute()) {
             $num=$stmt->rowCount();
             if($num>0){
-                // $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                $this->userid = $row['userid'];
                 // // set properties
                 // $this->userid = $row['userid'];
                 // echo $this->userid;

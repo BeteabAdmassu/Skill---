@@ -26,7 +26,9 @@ header('Access-Control-Allow-Origin: *');
 
   //Create post
   if($Signin->authenticate()) { 
-    header("Location: http://localhost/Temari-dojo/HomePage.php");
+    // header("Location: http://localhost/Temari-dojo/HomePage.php");
+    setcookie('user', $Signin->userid, time() + (86400 * 30), "/");
+    header("Location: http://localhost/t/temari-dojo/HomePage.php");
     die();
   } else {
     echo json_encode(
