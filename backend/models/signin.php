@@ -49,7 +49,7 @@ class Signin {
                 $row = $stmt->fetch(PDO::FETCH_ASSOC);
                 $this->username = $row['username'];
                
-
+                echo $this -> userHash;
                 setcookie("user_cookies",$this->userHash, time() + 3600, '/');
             return true;
             }
