@@ -407,4 +407,9 @@ i{
         margin-top: 400px;
         flex-direction: column;
     }
+
+    .price-container{
+        margin-top: 0;
+        height: 150ch;
+    }
 }
