@@ -14,7 +14,7 @@ include_once '../../models/Course.php';
 $database = new Database();
 $db = $database->connect();
 
-if(!isset($_COOKIE['user'])) {
+if(!isset($_COOKIE['user_cookies'])) {
     echo json_encode(array('message' => 'You have to be logged in for this to work'));
 }
 

@@ -52,9 +52,9 @@
                 $this->email = $row['email'];
                 $this->phoneNo = $row['phoneNo'];
                 $this->address = $row['address'];
-              
-         
-           return true;
+       
+                
+                return true;
             }
             else{
                 return false;

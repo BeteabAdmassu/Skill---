@@ -23,7 +23,7 @@
     
     function enrollNow($id) {
         echo ' 
-        <a class="enroll" href="enroll.php?crsId='.$id.'&stdId='.$_COOKIE['user'].'">
+        <a class="enroll" href="enroll.php?crsId='.$id.'&stdId='.$_COOKIE['user_cookies'].'">
             <strong>Enroll this course now</strong> 
         </a>';
     }
