@@ -1,0 +1,61 @@
+
+.search-container{
+    margin-top: 100px;
+    padding: 2ch;
+}
+.search-keyword{
+    margin: 1ch;
+    margin-left: 3ch;
+    color: #009866;
+}
+.search-resultset{
+    margin: 1ch;
+    margin-left: 3ch;
+}
+.lessons{
+    display: flex;
+    justify-content:space-between ;
+    flex-wrap: wrap;
+}
+.lesson{
+    background-color: whitesmoke;
+    margin: 2ch;
+    border-radius: 20px;
+    height: 30ch;
+    width: 45ch;
+    overflow: hidden;
+    padding: 1ch;
+}
+iframe{
+    width: 43ch;
+    height: 20ch;
+    border-radius: 20px;
+}
+.course-name{
+    font-size: small;
+    font-weight: bold;
+    margin:1ch;
+}
+.course-name a{
+    text-decoration: none;
+    color: #009866;
+}
+.instructor{
+    font-size: small;
+    margin:1ch;   
+}
+.instructor span{
+    font-weight: bold;
+}
+.institution{
+    margin:1ch;
+    font-size: small;
+}
+.institution span{
+    font-weight: bold;
+}
+@media(max-width:934px){
+    .lessons{
+        justify-content: center;
+    }
+}

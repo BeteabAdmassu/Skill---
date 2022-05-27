@@ -94,6 +94,28 @@
 
         return $stmt;
     }
+    function category($category) {
+        // select all query
+        $query = "SELECT *
+        FROM
+            " . $this->table . "
+        WHERE
+            Category = ?";
+
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+
+        // sanitize
+        $category = htmlspecialchars(strip_tags($category));
+
+        // bind
+        $stmt->bindParam(1, $category);
+
+        // execute query
+        $stmt->execute();
+
+        return $stmt;
+    }
     
 
 }  
