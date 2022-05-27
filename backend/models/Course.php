@@ -13,6 +13,8 @@
         public $Instructor;
         public $Institute;
         public $Description;
+        public $content;
+        public $requirement;
         public $Image;
         public $Category;
         public $Preview_video_link;
@@ -37,15 +39,14 @@
             return $stmt;
     }
 
-    function read_single() {
-
+    function read_single($id) {
         $query = "SELECT * FROM ".$this->table." WHERE id = ? LIMIT 0,1";
        
         // Prepare statement
         $stmt = $this->conn->prepare($query);
 
         // Bind Id
-        $stmt->bindParam(1, $this->id);
+        $stmt->bindParam(1, $id);
          
         //Execute query
         $stmt->execute();
@@ -56,6 +57,8 @@
         $this->Instructor = $row['Instructor'];
         $this->Institute = $row['Institute'];
         $this->Description = $row['Description'];
+        $this->content = $row['content'];
+        $this->requirement = $row['requirement'];
         $this->Image = $row['Image'];
         $this->Category = $row['Category'];
         $this->Preview_video_link = $row['Preview_video_link'];
