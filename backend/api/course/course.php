@@ -3,6 +3,7 @@
     include_once '../../config/Database.php';
     include_once '../../models/Course.php';
 
+
     // Instantiate Database
     $database = new Database();
     $db = $database->connect();
@@ -19,6 +20,13 @@
     function renderTag($tag, $content) {
         echo '<'.$tag.'>'.$content.'</'.$tag.'>';
     }
+    
+    function enrollNow($id) {
+        echo ' 
+        <a class="enroll" href="enroll.php?crsId='.$id.'&stdId='.$_COOKIE['user'].'">
+            <strong>Enroll this course now</strong> 
+        </a>';
+    }
 ?>
 
 
@@ -29,7 +37,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php $course -> Name ?></title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../../css/course.css">
 </head>
 <body>
 <nav class="nav">
@@ -50,7 +58,7 @@
     <span class="course-title"><i><?php renderTag('h1',$course -> Name); ?></i></span>
     <p><?php renderTag('p', $course -> Description); ?></p>
     <p>Instructor(s): <?php renderTag('a', $course -> Instructor); ?> </p>
-    <a class="enroll" href=""><strong>Enroll this course now</strong> </a>
+    <?php enrollNow($course -> id); ?>
 </article>
 
 <article class="course-review-vid">

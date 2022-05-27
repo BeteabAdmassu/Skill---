@@ -1,0 +1,107 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+.Lesson-page{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding-inline: 2vw; 
+}
+
+.Lesson-header{
+    background-color: #595F72;
+    padding: 3%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.LessonVideo{
+    border-radius: 10px;
+    height: 40vh;
+    overflow: hidden;
+}
+.LessonUnit-Content{
+    margin-top: 0;
+    text-align: center;
+    color: white;
+}
+.Lesson-Content{
+    margin-top: 4vh;
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-inline: 7%;
+}
+.lessonText{
+    font-weight: 400;
+}
+.Lessons-nav{
+    margin-top: 5vh;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    padding: 5%;
+    padding-inline: 7%;
+}
+.LessonUnit-nav{
+    font-size: 1.5em;
+    font-weight: 400;
+}
+.lessons{
+    list-style: none;
+}
+.lessons a{
+    text-decoration: none;
+    color: #31AFD4;
+}
+
+@media(min-width: 800px){
+    .Lesson-header{
+        height: 55vh;
+    }
+    .LessonVideo{
+        height: 48vh;
+    }
+}
+@media(min-width: 1025px){
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .Lesson-page{
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 0;
+        padding: 0;
+    }
+    .Lesson-Container{
+        margin-left: 20%;
+        padding: 3vw;
+    }
+    .Lessons-nav{
+        margin:0;
+        box-shadow: none;
+        background-color: snow;
+        border-right: 2px solid #B8D4E3;
+        border-radius: 0;
+
+        height: 100%;
+        position: fixed;
+        left: 0;
+        padding: 0;
+        width: 20%;
+    }
+    
+    .LessonUnit-nav{
+        margin-inline: 2vw;
+        margin-top: 4vh;
+    }
+    .Lesson-header{
+        height: 64vh;
+    }
+    .LessonVideo{
+        height: 57vh;
+    }
+}

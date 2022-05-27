@@ -51,17 +51,16 @@
 
 
 
-    function renderVid($courseId, $name, $instructor, $Preview_video_link) {
+    function renderVid($name, $instructor, $Preview_video_link) {
         echo '<div class="vid">
             <div class="videocontaint">
             <iframe width="400" height="200" src='.$Preview_video_link.' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <p>'.$name.'</p>
             <p>Instructor: '.$instructor.'</p>
-            <p><a href="backend/api/course/course.php?id='.$courseId.'">Go to course</a></p>
+            <p><a href="">Go to course</a></p>
         </div>';
     }
-
 
 ?>
 
@@ -71,9 +70,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Homepage.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="css/index.css">
     <title>Temari-Dojo</title>
 </head>
 <body>
@@ -83,16 +80,11 @@
             <li><img src="./assets/image/search_24px.png" alt=""><input type="search" name="search" id="" class="same" placeholder='Search for anything'></li>
         </ul>
         <ul class="right">
-            <div class="dropdown">
-
-
-            <button onclick="myFunction()" class="dropbtn"  id="username">Username<i class="fa-solid fa-user usericon"></i> </button>
-            <div id="myDropdown" class="dropdown-content">
-              <a class="myDropdown-a1" href="setting.php"><i class="fa-solid fa-user-pen usericon2"></i>Edit Profile</a>
-              <a class="myDropdown-a1" href="Login.php"><i class="fa-solid fa-arrow-right-from-bracket usericon2"></i>Logout</a>
-              
-            </div>
-            </div>          
+            <li><span></span><a class='dash' href="#">Dashboard</a></li>
+            <li><span></span><a class='browser' href="#">Browser</a></li>
+            <li class='log'><a class='letter' href="Login.php">Log in</a></li>
+            <li class='sgin'><a href="Signup.php">Sign Up</a></li>
+            <!-- <li><abbr title="User Account"><img src="./assets/image/user_50px.png" alt=""></abbr></li> -->
         </ul>
     </nav>
     <div class="firstpage">
@@ -130,7 +122,7 @@
                 <?php
                     // iterate through the array of courses
                     foreach($courses_arr['allcourses'] as $course) {
-                        renderVid($course['Id'],$course['Name'], $course['Instructor'], $course['Preview_video_link']);
+                        renderVid($course['Name'], $course['Instructor'], $course['Preview_video_link']);
                     }
                     // renderVid('Introduction to golang', 'Fireship', 'https://www.youtube.com/embed/446E-r0rXHI');
                 ?>
@@ -174,28 +166,6 @@
                     <p>&copy;2022 Temari Dojo, Inc.</p>
                 </div>
             </footer>
-
-
-            <script>
-    //     let username = document.querySelector('#username');
-    //    username.innerHTML = "Beteab";
-              fetch username 
-              window.onload = function() {
-       fetch('http://localhost/Temari-dojo/backend/api/SIgnIn-SignUp/signIn.php') 
-      .then(response => response.json())
-      .then(data => {
-        // let username = document.querySelector('.dropbtn');
-        // username.innerHTML = 'Beteab';
-        // console.log(data);
-    console.log(data.username);
-        
-      })
-      .catch(error => console.error(error));
-
-//   }
-    </script>
         <script src="js/Homepage.js"></script>
-            
-      
 </body>
 </html>

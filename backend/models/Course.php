@@ -53,6 +53,7 @@
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         //set properties
+        $this -> id = $row['ID'];
         $this->Name = $row['Name'];
         $this->Instructor = $row['Instructor'];
         $this->Institute = $row['Institute'];
