@@ -11,8 +11,8 @@
         $result = $course -> read();
         $num = $result->rowCount();
         // check for cookie
-        if(isset($_COOKIE['user'])) {
-            $user = $_COOKIE['user'];
+        if(isset($_COOKIE['user_cookies'])) {
+            $user = $_COOKIE['user_cookies'];
         }else {
             $user = 'Guest';
         }

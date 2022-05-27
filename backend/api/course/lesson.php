@@ -1,7 +1,30 @@
 <?php
+
+    include_once '../../config/Database.php';
+    include_once '../../models/Lesson.php';
+    
     $chapterid = $_GET['chapterid'];
     $chaptername = $_GET['chaptername'];
     $lesson = $_GET['lesson'];
+
+
+    // Instantiate Database
+    $database = new Database();
+    $db = $database->connect();
+
+    $lessonFromDb = new Lesson($db);
+    
+    $stmt = $lessonFromDb->getLessons($chapterid);
+
+    $lessons = array();
+
+    while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        extract($row);
+        $lesson_item = array(
+            'Lesson_title' => $Lesson_title
+        );
+        array_push($lessons, $lesson_item);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -76,9 +99,13 @@
                     echo "<p><strong>".$chaptername."</strong></p>";
                 ?>
             </div>
-            <ul class="lessons">
-                <li><a href="" class="lesson">Lesson &nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a></li>
-            </ul>
+            <ol class="lessons">
+                <?php
+                    foreach($lessons as $lesson) {
+                        echo '<li><a href="#">'.$lesson['Lesson_title'].'</a></li>';
+                    }
+                ?>
+            </ol>
         </nav>
     </div>
 
