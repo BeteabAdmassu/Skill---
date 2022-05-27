@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temari Dojo - Pricing </title>
+    <link rel="stylesheet" href="css/pricing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <nav class="nav">
+        <ul class="left">
+            <li><img src="assets\image\chevron_up_29px.png" alt=""><a class='udemy' href="#">Temari Dojo</a></li>
+            <li><img src="assets\image\search_24px.png" alt=""><input type="search" name="search" id="" class="same"
+                    placeholder='Search for anything'></li>
+        </ul>
+        <ul class="right">
+            <img class='menu' src="./image/Menu_29px" alt="">
+            <li><span></span><a class='dash' href="#">Dashboard</a></li>
+            <li><span></span><a class='browser' href="#">Browser</a></li>
+            <li class='log'><a class='letter' href="#">Log in</a></li>
+            <li class='sign'><a href="#">Sign Up</a></li>
+            <li><abbr title="User Account"><img src="./image/user_50px" alt=""></abbr></li>
+        </ul>
+    </nav>
+    <h1 class="ReadyToStart">Ready to start with <br>Temari Dojo?</h1>
+    <p class="Ready-info">Get unlimited access to all courses</p>
+    <div class="price-container">
+        <div class="price-item">
+            <h2 class="price-header">Starter</h2>
+            <p class="product-price">589.99 <span class="birr">Birr</span></p>
+            <ul class="product-list">
+                <li class="product-features">
+                    <i class="fa fa-check"></i> Unlimited access for <b>one month</b>
+                </li>
+                <li class="product-features">
+                    <i class="fa fa-check"></i> Limited Support
+                </li>
+            </ul>
+
+            <form method="post" class="yenepay" action="https://test.yenepay.com/">
+                <input type="hidden" name="Process" value="Express">
+                <!--A unique identifier for the payment order. Yenepay will attach it to the order and
+                                        echo it back when sending you any inforamtion about the order. To let the customer complete
+                                        unfinished order you can send it again with the same order info-->
+                <input type="hidden" name="MerchantOrderId" value="">
+                <!--Your yenepay merchant code-->
+                <input type="hidden" name="MerchantId" value="SB1598">
+                <!-- The ipn url that you want yenepay to send you ipn messages to. Note localhost is not accepted here-->
+                <input type="hidden" name="IPNUrl" value="">
+                <!-- The url in your website or application that you want yenepay to redirect the customer after completing their payment. Note localhost is not accepted here-->
+                <input type="hidden" name="SuccessUrl"
+                    value="https://sandbox.yenepay.com/Home/Details/5b71153a-94fa-48e9-98be-d9f5809a0c9f?custId=ef1f639b-c87b-4a91-856f-0633bed78431">
+                <!-- The url in your website or application that you want yenepay to redirect the customer when canceling their payment. Note localhost is not accepted here-->
+                <input type="hidden" name="CancelUrl"
+                    value="https://sandbox.yenepay.com/Home/Details/5b71153a-94fa-48e9-98be-d9f5809a0c9f?custId=ef1f639b-c87b-4a91-856f-0633bed78431">
+                <!--A unique identifier for each item in the order. You can leave this blank if you want too.-->
+                <input type="hidden" name="ItemId" value="b47fa67f-2bd9-4167-9568-43834f4a9ca4">
+                <!--The name for the item that that your customer is paying for-->
+                <input type="hidden" name="ItemName" value="Temari Dojo Starter Pack (1 month subscription)">
+                <!--The unit price for the item this must be a positive decimal number and can not be empty or zero-->
+                <input type="hidden" name="UnitPrice" value="589.99">
+                <!--The quantity for the item this must be a positive integer number with minimum value of 1-->
+                <!--The total price for the item will be determined by multiplying UnitPrice x Quantity for the item-->
+                <input type="hidden" name="Quantity" value="1">
+                <!--Submit button-->
+
+                <button type="submit" value="Buy Now"><img style="width:100px"
+                        src=" https://yenepayprod.blob.core.windows.net/images/logo.png"></button>
+            </form>
+        </div>
+
+        <div class="price-item">
+            <h2 class="price-header">Pro</h2>
+            <p class="product-price">1592.99 <span class="birr">Birr</span></p>
+            <ul class="product-list">
+                <li class="product-features">
+                    <i class="fa fa-check"></i> Save upto 10%
+                </li>
+                <li class="product-features">
+                    <i class="fa fa-check"></i> Unlimited access for <b>three months</b>
+                </li>
+                <li class="product-features">
+                    <i class="fa fa-check"></i> Limited Support
+                </li>
+            </ul>
+            <form method="post" class="yenepay" action="https://test.yenepay.com/">
+                <input type="hidden" name="Process" value="Express">
+                <!--A unique identifier for the payment order. Yenepay will attach it to the order and
+                                        echo it back when sending you any inforamtion about the order. To let the customer complete
+                                        unfinished order you can send it again with the same order info-->
+                <input type="hidden" name="MerchantOrderId" value="">
+                <!--Your yenepay merchant code-->
+                <input type="hidden" name="MerchantId" value="SB1598">
+                <!-- The ipn url that you want yenepay to send you ipn messages to. Note localhost is not accepted here-->
+                <input type="hidden" name="IPNUrl" value="">
+                <!-- The url in your website or application that you want yenepay to redirect the customer after completing their payment. Note localhost is not accepted here-->
+                <input type="hidden" name="SuccessUrl"
+                    value="https://sandbox.yenepay.com/Home/Details/5b71153a-94fa-48e9-98be-d9f5809a0c9f?custId=ef1f639b-c87b-4a91-856f-0633bed78431">
+                <!-- The url in your website or application that you want yenepay to redirect the customer when canceling their payment. Note localhost is not accepted here-->
+                <input type="hidden" name="CancelUrl"
+                    value="https://sandbox.yenepay.com/Home/Details/5b71153a-94fa-48e9-98be-d9f5809a0c9f?custId=ef1f639b-c87b-4a91-856f-0633bed78431">
+                <!--A unique identifier for each item in the order. You can leave this blank if you want too.-->
+                <input type="hidden" name="ItemId" value="b47fa67f-2bd9-4167-9568-43834f4a9ca4">
+                <!--The name for the item that that your customer is paying for-->
+                <input type="hidden" name="ItemName" value="Temari Dojo Pro Pack (3 month subscription)">
+                <!--The unit price for the item this must be a positive decimal number and can not be empty or zero-->
+                <input type="hidden" name="UnitPrice" value="1592.99">
+                <!--The quantity for the item this must be a positive integer number with minimum value of 1-->
+                <!--The total price for the item will be determined by multiplying UnitPrice x Quantity for the item-->
+                <input type="hidden" name="Quantity" value="1">
+                <!--Submit button-->
+
+                <button type="submit" value="Buy Now"><img style="width:100px"
+                        src=" https://yenepayprod.blob.core.windows.net/images/logo.png"></button>
+            </form>
+        </div>
+
+        <div class="price-item">
+            <h2 class="price-header">Premium</h2>
+            <p class="product-price">6,230.39 <span class="birr">Birr</span></p>
+            <ul class="product-list">
+                <li class="product-features">
+                    <i class="fa fa-check"></i> Save upto 12%
+                </li>
+                <li class="product-features">
+                    <i class="fa fa-check"></i> Unlimited access for <b>one Year</b>
+                </li>
+                <li class="product-features">
+                    <i class="fa fa-check"></i> 24/7 Support
+                </li>
+            </ul>
+            <form method="post" class="yenepay" action="https://test.yenepay.com/">
+                <input type="hidden" name="Process" value="Express">
+                <!--A unique identifier for the payment order. Yenepay will attach it to the order and
+                                        echo it back when sending you any inforamtion about the order. To let the customer complete
+                                        unfinished order you can send it again with the same order info-->
+                <input type="hidden" name="MerchantOrderId" value="">
+                <!--Your yenepay merchant code-->
+                <input type="hidden" name="MerchantId" value="SB1598">
+                <!-- The ipn url that you want yenepay to send you ipn messages to. Note localhost is not accepted here-->
+                <input type="hidden" name="IPNUrl" value="">
+                <!-- The url in your website or application that you want yenepay to redirect the customer after completing their payment. Note localhost is not accepted here-->
+                <input type="hidden" name="SuccessUrl"
+                    value="https://sandbox.yenepay.com/Home/Details/5b71153a-94fa-48e9-98be-d9f5809a0c9f?custId=ef1f639b-c87b-4a91-856f-0633bed78431">
+                <!-- The url in your website or application that you want yenepay to redirect the customer when canceling their payment. Note localhost is not accepted here-->
+                <input type="hidden" name="CancelUrl"
+                    value="https://sandbox.yenepay.com/Home/Details/5b71153a-94fa-48e9-98be-d9f5809a0c9f?custId=ef1f639b-c87b-4a91-856f-0633bed78431">
+                <!--A unique identifier for each item in the order. You can leave this blank if you want too.-->
+                <input type="hidden" name="ItemId" value="b47fa67f-2bd9-4167-9568-43834f4a9ca4">
+                <!--The name for the item that that your customer is paying for-->
+                <input type="hidden" name="ItemName" value="Temari Dojo Premium pack (1 year subscription)">
+                <!--The unit price for the item this must be a positive decimal number and can not be empty or zero-->
+                <input type="hidden" name="UnitPrice" value="6230.39">
+                <!--The quantity for the item this must be a positive integer number with minimum value of 1-->
+                <!--The total price for the item will be determined by multiplying UnitPrice x Quantity for the item-->
+                <input type="hidden" name="Quantity" value="1">
+                <!--Submit button-->
+
+                <button type="submit" value="Buy Now"><img style="width:100px"
+                        src=" https://yenepayprod.blob.core.windows.net/images/logo.png"></button>
+            </form>
+        </div>
+
+    </div>
+    <script src="js/Homepage.js"></script>
+</body>
+
+</html>
