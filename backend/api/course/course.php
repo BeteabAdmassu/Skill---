@@ -77,6 +77,17 @@
             }
         ?>
 </article>
+
+<article class="wht-ull-lrn">
+     <strong><i><h1>Requirements for this course</h1></i>
+     <?php 
+            $contents = explode(",", $course -> requirement);
+            foreach($contents as $content) {
+                echo '<strong>'.renderTag('p', $content).'</strong>';
+            }
+        ?>
+</article>
+
 <footer class="fotter">
                 <div class="leftfooter">
                     <ul class="left-left-footer">
