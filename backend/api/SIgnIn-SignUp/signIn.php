@@ -26,7 +26,7 @@
 
   //Create post
   if($Signin->authenticate()) { 
-    header("Location: http://localhost/t/temari-dojo/HomePage.php");
+    header("Location: http://localhost/temari-dojo/HomePage.php");
     die();
   } else {
     echo json_encode(
