@@ -25,8 +25,7 @@ class Signin {
     public function authenticate() {
         // Create query
         $query = 'SELECT * FROM ' . $this->table . ' WHERE email = :email AND password = :password';
-         
-     
+
         // Prepare statement
         $stmt = $this->conn->prepare($query);
 
@@ -40,7 +39,7 @@ class Signin {
         // Bind data
         $stmt->bindParam(':email', $this->email);
         $stmt->bindParam(':password', $this->password);
-           
+
         $this->userHash = hash('sha256', $this->email.$this->password);
 
         // Execute query
@@ -49,7 +48,7 @@ class Signin {
             if($num>0){
                 $row = $stmt->fetch(PDO::FETCH_ASSOC);
                 $this->username = $row['username'];
-                echo $this->username;
+               
 
                 setcookie("user_cookies",$this->userHash, time() + 3600, '/');
             return true;
@@ -57,13 +56,13 @@ class Signin {
             else{
                 return false;
             }
-           
+
         }
 
         // Print error if something goes wrong
         printf("Error: %s.\n", $stmt->error);
 
-         return false;
+        return false;
     }
 
 

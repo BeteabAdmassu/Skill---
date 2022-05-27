@@ -26,10 +26,17 @@
  
 
   //Create post
+<<<<<<< HEAD
   if( $Signin->authenticate()) {
     echo json_encode(
       array(  'username' => $Signin->username));
     header("Location: http://localhost/Temari-dojo/HomePage.php");
+=======
+  if($Signin->authenticate()) { 
+    // header("Location: http://localhost/Temari-dojo/HomePage.php");
+    setcookie('user', $Signin->userid, time() + (86400 * 30), "/");
+    header("Location: http://localhost/t/temari-dojo/HomePage.php");
+>>>>>>> c9d66b2a37d63f4a7148f43285ded5094871edc2
     die();
   } else {
     echo json_encode(
