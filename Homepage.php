@@ -73,6 +73,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/Homepage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <title>Temari-Dojo</title>
 </head>
 <body>
@@ -83,7 +84,9 @@
         </ul>
         <ul class="right">
             <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn"> Username<i class="fa-solid fa-user usericon"></i> </button>
+
+
+            <button onclick="myFunction()" class="dropbtn"  id="username">Username<i class="fa-solid fa-user usericon"></i> </button>
             <div id="myDropdown" class="dropdown-content">
               <a class="myDropdown-a1" href="setting.php"><i class="fa-solid fa-user-pen usericon2"></i>Edit Profile</a>
               <a class="myDropdown-a1" href="Login.php"><i class="fa-solid fa-arrow-right-from-bracket usericon2"></i>Logout</a>
@@ -171,6 +174,28 @@
                     <p>&copy;2022 Temari Dojo, Inc.</p>
                 </div>
             </footer>
+
+
+            <script>
+    //     let username = document.querySelector('#username');
+    //    username.innerHTML = "Beteab";
+              fetch username 
+              window.onload = function() {
+       fetch('http://localhost/Temari-dojo/backend/api/SIgnIn-SignUp/signIn.php') 
+      .then(response => response.json())
+      .then(data => {
+        // let username = document.querySelector('.dropbtn');
+        // username.innerHTML = 'Beteab';
+        // console.log(data);
+    console.log(data.username);
+        
+      })
+      .catch(error => console.error(error));
+
+//   }
+    </script>
         <script src="js/Homepage.js"></script>
+            
+      
 </body>
 </html>

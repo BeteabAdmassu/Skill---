@@ -34,7 +34,7 @@ class Signup {
     
     //hash
     $this->password = hash('sha256',$this->password);
-    $this->userid = hash('sha256',$this->username.$this->email.$this->password);
+    $this->userid = hash('sha256',$this->email.$this->password);
    
 
     // Bind data

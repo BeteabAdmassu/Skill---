@@ -6,7 +6,13 @@ class Signin {
     private $table = 'user';
 
     // properties
+    public $id;
+    public $firstname;
+    public $lastname;
+    public $username;
     public $email;
+    public $phoneNo;
+    public $address;
     public $password;
     public $userHash;
 
@@ -41,8 +47,12 @@ class Signin {
         if($stmt->execute()) {
             $num=$stmt->rowCount();
             if($num>0){
+                $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                $this->username = $row['username'];
+                echo $this->username;
+
                 setcookie("user_cookies",$this->userHash, time() + 3600, '/');
-              return true;
+            return true;
             }
             else{
                 return false;
@@ -55,6 +65,12 @@ class Signin {
 
          return false;
     }
+
+
+    
+
+
+
 
 }
 

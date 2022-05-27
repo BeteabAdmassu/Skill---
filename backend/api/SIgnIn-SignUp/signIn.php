@@ -24,14 +24,18 @@
   $Signin->password = $_POST['password'];
 
  
+
   //Create post
-  if($Signin->authenticate()) { 
+  if( $Signin->authenticate()) {
+    echo json_encode(
+      array(  'username' => $Signin->username));
     header("Location: http://localhost/Temari-dojo/HomePage.php");
     die();
   } else {
     echo json_encode(
-      array('message' => 'Login Failed')
+      array('message' => 'Post Not Created')
     );
+  }
   
- }
+ 
 ?>
