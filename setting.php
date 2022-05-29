@@ -52,6 +52,8 @@
 <div class="setting-body">  
      <div class="setting-aside">
                <button class="btn btn-profile"><i class="fa-solid fa-user"></i>Profile</button>
+               <button class="btn btn-subscription"><i class="fa-solid fa-comments-dollar"></i>Subscription</button>
+
 
      </div>
      <div class="setting-section">
@@ -110,7 +112,11 @@
       }
     }
   }
+       
 
+  document.querySelector(".btn-subscription").onclick = function () {
+        location.href = "pricingPage.html";
+    };
    </script>
 </body>
 </html>
