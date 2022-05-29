@@ -1,12 +1,12 @@
 <?php
 
-    include_once 'backend/config/Database.php';
-    include_once 'backend/models/Course.php';
-    // Instantiate Database
-    $database = new Database();
-    $db = $database->connect();
+include_once 'backend/config/Database.php';
+include_once 'backend/models/Course.php';
+// Instantiate Database
+$database = new Database();
+$db = $database->connect();
 
-        $course = new Course($db);
+$course = new Course($db);
 
         $result = $course -> read();
         $num = $result->rowCount();
@@ -17,56 +17,56 @@
             $user = 'Guest';
         }
 
-        //hash username and password
-        $user = hash('sha256', $user);
+//hash username and password
+$user = hash('sha256', $user);
 
-        if($num > 0) {
-            // Post array
-            $courses_arr = array();
-            $courses_arr['allcourses'] = array();
-            $courses_arr['coursesenrolled'] = array();
+if ($num > 0) {
+    // Post array
+    $courses_arr = array();
+    $courses_arr['allcourses'] = array();
+    $courses_arr['coursesenrolled'] = array();
 
-            while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                extract($row);
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+        extract($row);
 
-                $course_item = array(
-                    'Id' => $ID,
-                    'Name' => $Name,
-                    'Instructor' => $Instructor,
-                    'Institute' => $Institute,
-                    'Description' => $Description,
-                    'Image' => $Image,
-                    'Preview_video_link' => $Preview_video_link,
-                );
+        $course_item = array(
+            'Id' => $ID,
+            'Name' => $Name,
+            'Instructor' => $Instructor,
+            'Institute' => $Institute,
+            'Description' => $Description,
+            'Image' => $Image,
+            'Preview_video_link' => $Preview_video_link,
+        );
 
-                //Push to "data"
-                array_push($courses_arr['allcourses'], $course_item);
-            }
-        // echo json_encode($courses_arr);
-        }
-        else {
-            echo json_encode(array('message' => 'No courses found'));
-        }
-
-
-
-
-    function renderVid($courseId, $name, $instructor, $Preview_video_link) {
-        echo '<div class="vid">
-            <div class="videocontaint">
-            <iframe width="400" height="200" src='.$Preview_video_link.' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <p>'.$name.'</p>
-            <p>Instructor: '.$instructor.'</p>
-            <p><a href="backend/api/course/course.php?id='.$courseId.'">Go to course</a></p>
-        </div>';
+        //Push to "data"
+        array_push($courses_arr['allcourses'], $course_item);
     }
+    // echo json_encode($courses_arr);
+} else {
+    echo json_encode(array('message' => 'No courses found'));
+}
+
+
+
+
+function renderVid($courseId, $name, $instructor, $Preview_video_link)
+{
+    echo '<div class="vid">
+            <div class="videocontaint">
+            <iframe width="400" height="200" src=' . $Preview_video_link . ' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p><a href="backend/api/course/course.php?id=' . $courseId . '">' . $name . '</a></p>
+            <p>Instructor: ' . $instructor . '</p>
+        </div>';
+}
 
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -74,8 +74,10 @@
     <link rel="stylesheet" href="css/Homepage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="js/Homepage.js"></script>
+
     <title>Temari-Dojo</title>
 </head>
+
 <body>
     <nav class="nav">
         <ul class="left">
@@ -92,7 +94,6 @@
               <a class="myDropdown-a1" href="Login.php"><i class="fa-solid fa-arrow-right-from-bracket usericon2"></i>Logout</a>
               
             </div>
-            </div>          
         </ul>
     </nav>
     <div class="firstpage">
@@ -102,24 +103,20 @@
         </div>
     </div>
     <div class="sectionvideo">
-            <h1>A broad selection of courses</h1>
-            <p>Choose from 185,000 online video courses with new additions published every month</p>
-            <div class="buttons">
-                <li onclick="fun1(this)"><span class='span1'></span><a href="#">Python</a></li>
-                <li onclick="fun2(this)"><span class='span2'></span><a href="#">Excel</a></li>
-                <li onclick="fun3(this)"><span class='span3'></span><a href="#">Web Development</a></li>
-                <li onclick="fun4(this)"><span class='span4'></span><a href="#">Javascript</a></li>
-                <li onclick="fun5(this)"><span class='span5'></span><a href="#">DataScience</a></li>
-                <li onclick="fun6(this)"><span class='span6'></span><a href="#">AWS Certificate</a></li>
-                <li onclick="fun7(this)"><span class='span7'></span><a href="#">Drawing</a></li>
-            </div>
+        <h1>A broad selection of courses</h1>
+        <p>Choose from 185,000 online video courses with new additions published every month</p>
+        <div class="buttons">
+            <li onclick="fun1(this)"><span class='span1'></span><a href="#">My Courses</a></li>
+            <li onclick="fun2(this)"><span class='span2'></span><a href="#">Browse</a></li>
+
         </div>
-        <div class="videos">
-            <h1>Why Temari Dojo?</h1>
-            <p>Our online learning platform is filled with thousands of creative courses and classes taught by experts to help you learn new skills.</p>
-            <button class='btn'>Become a member</button>
-            <div class="vid-box">
-                <!-- <div class="vid">
+    </div>
+    <div class="videos">
+        <h1>Why Temari Dojo?</h1>
+        <p>Our online learning platform is filled with thousands of creative courses and classes taught by experts to help you learn new skills.</p>
+        <button class='btn'>Become a member</button>
+        <div class="vid-box">
+            <!-- <div class="vid">
                     <div class="videocontaint">
                     <iframe width="400" height="200" src="https://www.youtube.com/embed/RsPWEmfOQdU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
@@ -127,27 +124,26 @@
                     <p>Instructor: </p>
                     <p><a href="">Go to course</a></p>
                 </div> -->
-                <?php
-                    // iterate through the array of courses
-                    foreach($courses_arr['allcourses'] as $course) {
-                        renderVid($course['Id'],$course['Name'], $course['Instructor'], $course['Preview_video_link']);
-                    }
-                    // renderVid('Introduction to golang', 'Fireship', 'https://www.youtube.com/embed/446E-r0rXHI');
-                ?>
-                <div class="vid">
-                    <div class="videocontaint">
-                        
-                    </div>
-                </div>
-                <div class="vid">
+            <?php
+            // iterate through the array of courses
+            foreach ($courses_arr['allcourses'] as $course) {
+                renderVid($course['Id'], $course['Name'], $course['Instructor'], $course['Preview_video_link']);
+            }
+            // renderVid('Introduction to golang', 'Fireship', 'https://www.youtube.com/embed/446E-r0rXHI');
+            ?>
+            <div class="vid">
                 <div class="videocontaint">
-                        
+
                 </div>
-                </div>
-                <div class="vid">
+            </div>
+            <div class="vid">
                 <div class="videocontaint">
-                        
-                        </div>
+
+                </div>
+            </div>
+            <div class="vid">
+                <div class="videocontaint">
+
                 </div>
             </div>
         </div>
@@ -181,4 +177,5 @@
             
       
 </body>
+
 </html>
