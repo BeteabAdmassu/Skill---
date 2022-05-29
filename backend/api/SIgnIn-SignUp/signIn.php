@@ -2,7 +2,6 @@
 <?php
 
   header('Access-Control-Allow-Origin: *');
-  header('Content-Type: application/json');
   header('Access-Control-Allow-Methods: POST');
   header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
  
@@ -26,12 +25,16 @@
 
   //Create post
   if($Signin->authenticate()) { 
+    echo json_encode(
+      array('username' => $Signin->username
+            
+          )
+  );
     header("Location: http://localhost/temari-dojo/HomePage.php");
     die();
   } else {
-    echo json_encode(
-      array('message' => 'Post Not Created')
-    );
+    echo '<script>alert("User does not exist")
+    window.location.href=`../../../Login.php`</script>';
   }
   
  

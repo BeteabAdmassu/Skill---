@@ -48,7 +48,8 @@
             <h1 class='h1'>Sign Up</h1>
             <p class='error'><?//php echo $error; ?></p>
             <form action="backend\api\SIgnIn-SignUp\signup.php" method="Post">
-                <input type="text" name="fullname" id="one" class="same" placeholder='Fullname' required>
+                <input type="text" name="firstname" id="one" class="same" placeholder='Firstname' required>
+                <input type="text" name="lastname" id="one" class="same" placeholder='lastname' required>
                 <input type="text" name="username" id="two" class="same" placeholder='Username' required>
                 <input type="email" name="email" id="five" class="same" placeholder='Email Address' required>
                 <input type="password" name="password" id="three" class="same" placeholder='Password' required>
