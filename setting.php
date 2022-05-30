@@ -7,6 +7,98 @@
     <link rel="stylesheet" href="css/setting.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Setting</title>
+    <style>
+      *
+      {
+        font-weight: 400;
+      }
+      .frm-edit-profile input
+      {
+          outline: none;
+      }
+      .frm-edit-profile input::placeholder
+      {
+        color: #ccc;
+      }
+      .frm-edit-profile input
+      {
+        cursor: default;
+        font-weight: 400;
+      }
+      .main-div-myprofile-discription
+      {
+        color: #5B5E64;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .main-div-myprofilePic
+      {
+          width: 10%;
+          height: 15vh;
+          background-color: #fff;
+          border-radius: 50%;
+          margin-top: 2vh;
+          margin-bottom: 2vh;
+          margin-left: 10px;
+          display: flex;
+          align-items: center;
+          justify-content:center;
+      }
+      @media screen and (max-width: 560px) {
+        ul.right
+        {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            list-style: none;
+            margin-right: 40px;
+            height: 1000px;
+            width: 530px;
+            background-color: aliceblue;
+            z-index: -1;
+        }
+        .right .menu
+        {
+            position: fixed;
+            top: 10%;
+            left: 85%;
+            display: block;
+            z-index: 100;
+            width: 30px;
+        }
+        ul.right li
+        {
+            margin: 10px 5px;
+            padding: 10px;
+            width: 90%;
+            display: flex;
+            align-items: center;
+        }
+        ul.right li a{
+            color: black;
+            text-decoration: none;
+            font-size: 14px;
+            text-align: center;
+        }
+        .left input
+        {
+          width: 100%;
+        }
+        .right .menu
+        {
+            display: inline-block;
+        }
+      }
+      .right .menu
+      {
+          display: none;
+      }
+    </style>
 </head>
 <body>
  <div class="setting-container"> 
@@ -17,6 +109,7 @@
             <li><img src="./assets/image/search_24px.png" alt=""><input type="search" name="search" id="" class="same" placeholder='Search for anything'></li>
         </ul>
         <ul class="right">
+        <img class='menu' src="./assets/image/Menu_50px.png" alt="">
             <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn">  <strong id="username">Username</strong><i class="fa-solid fa-user usericon"></i> </button>
             <div id="myDropdown" class="dropdown-content">
@@ -117,6 +210,23 @@
   document.querySelector(".btn-subscription").onclick = function () {
         location.href = "pricingPage.html";
     };
+    document.querySelector('.menu').addEventListener('click',function()
+                    {
+                        if(document.querySelector('.right').style.left === "0%")
+                        {
+                            document.querySelector('.right').style.left = "-130%";
+                            document.querySelector('.right').style.transition = ".5s all linear";
+                            document.querySelector('.menu').style.transition = ".5s all linear";
+                            document.querySelector('.menu').style.left = "5%";
+                        }
+                        else{
+                            document.querySelector('.right').style.left = "0%";
+                            document.querySelector('.right').style.transition = ".5s all linear";
+                            document.querySelector('.menu').style.left = "85%";
+                            document.querySelector('.menu').style.transition = ".5s all linear";
+                        }
+                    })
+                
    </script>
 </body>
 </html>

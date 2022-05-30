@@ -1,4 +1,7 @@
 
+.nav{
+    position: relative;
+}
 .search-container{
     margin-top: 100px;
     padding: 2ch;

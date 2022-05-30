@@ -76,6 +76,62 @@ function renderVid($courseId, $name, $instructor, $Preview_video_link)
 
 
     <title>Temari-Dojo</title>
+    <style>
+        .firstpage
+            {
+                position: relative;
+                width: 85%;
+                margin: 1% auto;
+                background-image: url(./assets/image/udemy.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 43vh;
+                padding: 3%;
+                margin-top: 6%;
+            }
+            .fotter
+            {
+                width: 100%;
+                margin: 1% auto;
+                display: flex;
+                align-items: center;
+                background-color: #252424;
+                height: 400px;
+                padding: 60px;
+                margin-top: 5%;
+            }
+            .videos
+            {
+                width: 100%;
+                margin: 1% auto;
+                border: .5px solid #ccc;
+                padding: 20px;
+            }
+        .videos .vid-box
+        {
+            width: 80%;
+            margin: 1% auto;
+            display: flex;
+            align-items: center;
+            overflow-x: scroll;
+        }
+        .videos .vid-box .vid
+        {
+            width: 370px;
+            height: 340px;
+            border: .5px solid #ccc;
+            margin: 15px 5px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .contain
+        {
+            width: 80%;
+            margin: 1% auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -89,6 +145,7 @@ function renderVid($courseId, $name, $instructor, $Preview_video_link)
             </li>
         </ul>
         <ul class="right">
+        <img class='menu' src="./assets/image/Menu_50px.png" alt="">
             <div class="dropdown">
 
 
@@ -116,9 +173,11 @@ function renderVid($courseId, $name, $instructor, $Preview_video_link)
         </div>
     </div>
     <div class="videos">
-        <h1>Why Temari Dojo?</h1>
-        <p>Our online learning platform is filled with thousands of creative courses and classes taught by experts to help you learn new skills.</p>
-        <button class='btn'>Become a member</button>
+        <div class="contain">
+            <h1>Why Temari Dojo?</h1>
+            <p>Our online learning platform is filled with thousands of creative courses and classes taught by experts to help you learn new skills.</p>
+            <button class='btn'>Become a member</button>
+        </div>
         <div class="vid-box">
             <!-- <div class="vid">
                     <div class="videocontaint">
@@ -166,6 +225,75 @@ function renderVid($courseId, $name, $instructor, $Preview_video_link)
                     <p>&copy;2022 Temari Dojo, Inc.</p>
                 </div>
             </footer>
-    <script src="js/Homepage.js"></script>
+
+
+  
+            <script src="js/Homepage.js"></script>
+            <script>
+                 document.querySelector('.menu').addEventListener('click',function()
+                    {
+                        if(document.querySelector('.right').style.left === "0%")
+                        {
+                            document.querySelector('.right').style.left = "-130%";
+                            document.querySelector('.right').style.transition = ".5s all linear";
+                            document.querySelector('.menu').style.transition = ".5s all linear";
+                            document.querySelector('.menu').style.left = "5%";
+                        }
+                        else{
+                            document.querySelector('.right').style.left = "0%";
+                            document.querySelector('.right').style.transition = ".5s all linear";
+                            document.querySelector('.menu').style.left = "85%";
+                            document.querySelector('.menu').style.transition = ".5s all linear";
+                        }
+                    })
+                
+                    window.addEventListener('scroll',()=>
+                {
+                    const scrolled = window.scrollY;
+                    if(scrolled > 5)
+                    {
+                        document.querySelector('.nav').style.backgroundColor = "#000";
+                        document.querySelector('.udemy').style.color = "#fff";
+                        document.querySelector('.dash').style.color = "#fff";
+                        document.querySelector('.browser').style.color = "#fff";
+                        document.querySelector('.udemy').style.zIndex = "100";
+                        document.querySelector('.nav').style.transition = ".5s all linear";
+                        document.querySelector('.udemy').style.transition = ".5s all linear";
+                        document.querySelector('.letter').style.color = "#fff";
+                        document.querySelector('.log').style.transition = ".5s all linear";
+                        document.querySelector('.sgin').style.border = ".5px solid #fff";
+                        document.querySelector('.sgin').style.transition = ".5s all linear";
+                        document.querySelector('.log').style.border = ".5px solid #fff";
+                    }
+                    else
+                    {
+                        document.querySelector('.nav').style.backgroundColor = "#fff";
+                        document.querySelector('.udemy').style.color = "#000";
+                        document.querySelector('.dash').style.color = "#000";
+                        document.querySelector('.browser').style.color = "#000";
+                        document.querySelector('.nav').style.transition = ".5s all linear";
+                        document.querySelector('.udemy').style.transition = ".5s all linear";
+                        document.querySelector('.log').style.border = ".5px solid #000";
+                        document.querySelector('.letter').style.color = "#000";
+                        document.querySelector('.log').style.transition = ".5s all linear";
+                        document.querySelector('.sgin').style.border = ".5px solid #000";
+                        document.querySelector('.sgin').style.transition = ".5s all linear"
+                    }
+                })
+                window.addEventListener('scroll',()=>
+                {
+                    const scrolled = window.scrollY;
+                        if(scrolled > 5)
+                        {
+                            document.querySelector('.menu').style.display = 'none';
+                        }
+                        else
+                        {
+                            document.querySelector('.menu').style.display = 'block';
+                        }
+                    // document.querySelector('.para').innerHTML= scrolled;
+                })
+            </script>
+      
 </body>
 </html>
