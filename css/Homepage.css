@@ -19,6 +19,7 @@
     box-shadow: 0 0 10px 0 rgb(0,0,0,.7);
     z-index: 100;
 }
+
 ul.left
 {
     width: 70%;
@@ -443,7 +444,12 @@ ul.right li:nth-of-type(3) a
       background-color: #fff;
       font-size: small;
   }
-  
+li.search-form{
+    display: initial;
+}
+.search-form form{
+    width: 100%;
+}
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {background-color: #ddd}
   

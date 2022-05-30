@@ -1,6 +1,9 @@
 <?php
-//include_once 'backend/config/Database.php';
-//include_once 'backend/api/course/searchcourse.php';
+
+
+
+include_once 'backend/config/Database.php';
+include_once 'backend/models/Course.php';
 
 function renderVid($courseId, $name, $instructor, $Preview_video_link)
 {
@@ -29,7 +32,7 @@ function renderVid($courseId, $name, $instructor, $Preview_video_link)
 <nav class="nav">
         <ul class="left">
             <li><img src="./assets/image/chevron_up_29px.png" alt=""><a class='udemy' href="#">Temari Dojo</a></li>
-            <li><img src="./assets/image/search_24px.png" alt=""><input type="text" name="search" id="search" class="same" placeholder='Search for anything'></li>
+            <li><img src="./assets/image/search_24px.png" alt=""><input type="search" name="search" id="search" class="same" placeholder='Search for anything'></li>
         </ul>
         <ul class="right">
             <div class="dropdown">
@@ -88,6 +91,7 @@ function renderVid($courseId, $name, $instructor, $Preview_video_link)
 
 }
     </script>
+    <script src="js/jquery.js"></script>
     <script src="js/Homepage.js"></script>
     <script src="js/categories.js"></script>
 </body>

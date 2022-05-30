@@ -73,7 +73,7 @@ function renderVid($courseId, $name, $instructor, $Preview_video_link)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/Homepage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="js/Homepage.js"></script>
+
 
     <title>Temari-Dojo</title>
 </head>
@@ -82,7 +82,11 @@ function renderVid($courseId, $name, $instructor, $Preview_video_link)
     <nav class="nav">
         <ul class="left">
             <li><img src="./assets/image/chevron_up_29px.png" alt=""><a class='udemy' href="Homepage.php">Temari Dojo</a></li>
-            <li><img src="./assets/image/search_24px.png" alt=""><input type="search" name="search" id="" class="same" placeholder='Search for anything'></li>
+            <li class='search-form'>
+            <form action="backend/api/course/searchcourse.php" method="get">
+                <img src="./assets/image/search_24px.png" alt=""><input type="search" name="search" id="search" class="same" placeholder='Search for anything'>
+            </form>
+            </li>
         </ul>
         <ul class="right">
             <div class="dropdown">
@@ -136,17 +140,9 @@ function renderVid($courseId, $name, $instructor, $Preview_video_link)
 
                 </div>
             </div>
-            <div class="vid">
-                <div class="videocontaint">
 
-                </div>
-            </div>
-            <div class="vid">
-                <div class="videocontaint">
-
-                </div>
-            </div>
         </div>
+    </div>
                     <!-- Footer Section For the the last page -->
             <footer class="fotter">
                 <div class="leftfooter">
@@ -170,12 +166,6 @@ function renderVid($courseId, $name, $instructor, $Preview_video_link)
                     <p>&copy;2022 Temari Dojo, Inc.</p>
                 </div>
             </footer>
-
-
-  
-    
-            
-      
+    <script src="js/Homepage.js"></script>
 </body>
-
 </html>

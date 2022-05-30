@@ -167,5 +167,6 @@
                 </div>
             </footer>
         <script src="js/Homepage.js"></script>
+        <script src="js/jquery.js"></script>
 </body>
 </html>
