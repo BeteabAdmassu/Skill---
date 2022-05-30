@@ -1,11 +1,5 @@
 
 <?php 
-//Headers
-   header('Access-Control-Allow-Origin: *');
- // header('Content-Type: application/json');
-   header('Access-Control-Allow-Methods: POST');
-  header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
- 
   include_once '../../config/Database.php';  
   include_once '../../models/Signup.php';
 
@@ -17,9 +11,6 @@
   // Instantiate blog post object
   $Signup = new Signup($db);
 
-  // Get raw posted data
-  $data = json_decode(file_get_contents("php://input"));
- 
   $Signup->firstname=$_POST['firstname'];
   $Signup->lastname=$_POST['lastname'];
   $Signup->username = $_POST['username'];

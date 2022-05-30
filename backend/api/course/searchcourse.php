@@ -1,12 +1,6 @@
 <?php
-
-
 include_once '../../config/Database.php';
 include_once '../../models/Course.php';
-
-// frontend\pages
-// header('Location: C:\\xampp\htdocs\Temari-dojo\backend/api/course/courses.php');
-// exit();
 
 // Instantiate Database
 $database = new Database();

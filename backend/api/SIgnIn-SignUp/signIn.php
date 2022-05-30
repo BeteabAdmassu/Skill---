@@ -1,11 +1,5 @@
 
 <?php
-
-  header('Access-Control-Allow-Origin: *');
-  header('Access-Control-Allow-Methods: POST');
-  header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
- 
-
   include_once '../../config/Database.php';
   include_once '../../models/signin.php';
 
@@ -16,9 +10,6 @@
   // Instantiate blog post object
   $Signin = new signin($db);
    
-  // Get raw posted data
-  $data = json_decode(file_get_contents("php://input"));
-
   $Signin->email = $_POST['email'];
   $Signin->password = $_POST['password'];
 
