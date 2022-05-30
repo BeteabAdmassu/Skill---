@@ -18,7 +18,7 @@
         </ul>
         <ul class="right">
             <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn"> Username<i class="fa-solid fa-user usericon"></i> </button>
+            <button onclick="myFunction()" class="dropbtn">  <strong id="username">Username</strong><i class="fa-solid fa-user usericon"></i> </button>
             <div id="myDropdown" class="dropdown-content">
               <a class="myDropdown-a1" href="setting.php"><i class="fa-solid fa-user-pen usericon2"></i>Edit Profile</a>
               <a class="myDropdown-a1" href="Login.php"><i class="fa-solid fa-arrow-right-from-bracket usericon2"></i>Logout</a>
@@ -42,6 +42,7 @@
         form.elements.username.value = data.username;
         form.elements.phoneNo.value = data.phoneNo;
         form.elements.address.value = data.address;
+        document.querySelector("#username").innerHTML = data.username;
 
       })
       .catch(error => console.error(error));
@@ -51,6 +52,8 @@
 <div class="setting-body">  
      <div class="setting-aside">
                <button class="btn btn-profile"><i class="fa-solid fa-user"></i>Profile</button>
+               <button class="btn btn-subscription"><i class="fa-solid fa-comments-dollar"></i>Subscription</button>
+
 
      </div>
      <div class="setting-section">
@@ -91,6 +94,7 @@
     
 </div>
    <script>
+
      function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
@@ -108,6 +112,11 @@
       }
     }
   }
+       
+
+  document.querySelector(".btn-subscription").onclick = function () {
+        location.href = "pricingPage.html";
+    };
    </script>
 </body>
 </html>

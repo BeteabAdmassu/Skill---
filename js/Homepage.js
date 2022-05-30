@@ -1,3 +1,17 @@
+//fetch username
+
+
+window.onload = function() {
+    fetch('http://localhost/Temari-dojo/backend/api/user/loadUserInfoAPI.php')
+   .then(response => response.json())
+   .then(data => {
+     document.querySelector("#username").innerHTML = data.username
+
+   })
+   .catch(error => console.error(error));
+
+}
+
 
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");

@@ -26,7 +26,7 @@ function renderVid($courseId, $name, $instructor, $Preview_video_link)
     <title>Temari Dojo Search</title>
 </head>
 <body>
-    <nav class="nav">
+<nav class="nav">
         <ul class="left">
             <li><img src="./assets/image/chevron_up_29px.png" alt=""><a class='udemy' href="#">Temari Dojo</a></li>
             <li><img src="./assets/image/search_24px.png" alt=""><input type="text" name="search" id="search" class="same" placeholder='Search for anything'></li>
@@ -35,12 +35,11 @@ function renderVid($courseId, $name, $instructor, $Preview_video_link)
             <div class="dropdown">
 
 
-                <button onclick="myFunction()" class="dropbtn" id="username">Username<i class="fa-solid fa-user usericon"></i> </button>
-                <div id="myDropdown" class="dropdown-content">
-                    <a class="myDropdown-a1" href="setting.php"><i class="fa-solid fa-user-pen usericon2"></i>Edit Profile</a>
-                    <a class="myDropdown-a1" href="Login.php"><i class="fa-solid fa-arrow-right-from-bracket usericon2"></i>Logout</a>
-
-                </div>
+            <button onclick="myFunction()" class="dropbtn" > <strong id="username">Username</strong> <i class="fa-solid fa-user usericon"></i> </button>
+            <div id="myDropdown" class="dropdown-content">
+              <a class="myDropdown-a1" href="setting.php"><i class="fa-solid fa-user-pen usericon2"></i>Edit Profile</a>
+              <a class="myDropdown-a1" href="Login.php"><i class="fa-solid fa-arrow-right-from-bracket usericon2"></i>Logout</a>
+              
             </div>
         </ul>
     </nav>
@@ -78,22 +77,16 @@ function renderVid($courseId, $name, $instructor, $Preview_video_link)
     </div>
     
     <script>
-        //     let username = document.querySelector('#username');
-        //    username.innerHTML = "Beteab";
-        fetch username
-        window.onload = function() {
-                fetch('http://localhost/Temari-dojo/backend/api/SIgnIn-SignUp/signIn.php')
-                    .then(response => response.json())
-                    .then(data => {
-                        // let username = document.querySelector('.dropbtn');
-                        // username.innerHTML = 'Beteab';
-                        // console.log(data);
-                        console.log(data.username);
+       window.onload = function() {
+    fetch('http://localhost/Temari-dojo/backend/api/user/loadUserInfoAPI.php')
+   .then(response => response.json())
+   .then(data => {
+     document.querySelector("#username").innerHTML = data.username
 
-                    })
-                    .catch(error => console.error(error));
+   })
+   .catch(error => console.error(error));
 
-                //   }
+}
     </script>
     <script src="js/Homepage.js"></script>
     <script src="js/categories.js"></script>

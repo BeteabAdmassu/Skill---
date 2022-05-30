@@ -73,6 +73,7 @@ function renderVid($courseId, $name, $instructor, $Preview_video_link)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/Homepage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/Homepage.js"></script>
 
     <title>Temari-Dojo</title>
 </head>
@@ -80,19 +81,18 @@ function renderVid($courseId, $name, $instructor, $Preview_video_link)
 <body>
     <nav class="nav">
         <ul class="left">
-            <li><img src="./assets/image/chevron_up_29px.png" alt=""><a class='udemy' href="#">Temari Dojo</a></li>
+            <li><img src="./assets/image/chevron_up_29px.png" alt=""><a class='udemy' href="Homepage.php">Temari Dojo</a></li>
             <li><img src="./assets/image/search_24px.png" alt=""><input type="search" name="search" id="" class="same" placeholder='Search for anything'></li>
         </ul>
         <ul class="right">
             <div class="dropdown">
 
 
-                <button onclick="myFunction()" class="dropbtn" id="username">Username<i class="fa-solid fa-user usericon"></i> </button>
-                <div id="myDropdown" class="dropdown-content">
-                    <a class="myDropdown-a1" href="setting.php"><i class="fa-solid fa-user-pen usericon2"></i>Edit Profile</a>
-                    <a class="myDropdown-a1" href="Login.php"><i class="fa-solid fa-arrow-right-from-bracket usericon2"></i>Logout</a>
-
-                </div>
+            <button onclick="myFunction()" class="dropbtn" > <strong id="username">Username</strong> <i class="fa-solid fa-user usericon"></i> </button>
+            <div id="myDropdown" class="dropdown-content">
+              <a class="myDropdown-a1" href="setting.php"><i class="fa-solid fa-user-pen usericon2"></i>Edit Profile</a>
+              <a class="myDropdown-a1" href="Login.php"><i class="fa-solid fa-arrow-right-from-bracket usericon2"></i>Logout</a>
+              
             </div>
         </ul>
     </nav>
@@ -147,52 +147,35 @@ function renderVid($courseId, $name, $instructor, $Preview_video_link)
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Footer Section For the the last page -->
-    <footer class="fotter">
-        <div class="leftfooter">
-            <ul class="left-left-footer">
-                <li><a href="#">Ethiopia</a></li>
-                <li><a href="#">Contact-Us</a></li>
-                <li><a href="#">About-Us</a></li>
-            </ul>
-            <ul class="middle-footer">
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Help and Support</a></li>
-            </ul>
-            <ul class="right-footer">
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Privacy Policies</a></li>
-                <li><a href="#">Cookie Setting</a></li>
-            </ul>
-        </div>
-        <div class="rightfooter">
-            <button class="btnfooter"><img src=".//assets/image/globe_29px.png" alt="">English</button>
-            <p>&copy;2022 Temari Dojo, Inc.</p>
-        </div>
-    </footer>
+                    <!-- Footer Section For the the last page -->
+            <footer class="fotter">
+                <div class="leftfooter">
+                    <ul class="left-left-footer">
+                        <li><a href="#">Ethiopia</a></li>
+                        <li><a href="#">Contact-Us</a></li>
+                        <li><a href="#">About-Us</a></li>
+                    </ul>
+                    <ul class="middle-footer">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Help and Support</a></li>
+                    </ul>
+                    <ul class="right-footer">
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy Policies</a></li>
+                        <li><a href="#">Cookie Setting</a></li>
+                    </ul>
+                </div>
+                <div class="rightfooter">
+                    <button class="btnfooter"><img src=".//assets/image/globe_29px.png" alt="">English</button>
+                    <p>&copy;2022 Temari Dojo, Inc.</p>
+                </div>
+            </footer>
 
 
-    <script>
-        //     let username = document.querySelector('#username');
-        //    username.innerHTML = "Beteab";
-        fetch username
-        window.onload = function() {
-                fetch('http://localhost/Temari-dojo/backend/api/SIgnIn-SignUp/signIn.php')
-                    .then(response => response.json())
-                    .then(data => {
-                        // let username = document.querySelector('.dropbtn');
-                        // username.innerHTML = 'Beteab';
-                        // console.log(data);
-                        console.log(data.username);
-
-                    })
-                    .catch(error => console.error(error));
-
-                //   }
-    </script>
-    <script src="js/Homepage.js"></script>
-
+  
+    
+            
+      
 </body>
 
 </html>

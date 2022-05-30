@@ -1,9 +1,9 @@
 
 <?php 
 //Headers
-  header('Access-Control-Allow-Origin: *');
-  header('Content-Type: application/json');
-  header('Access-Control-Allow-Methods: POST');
+   header('Access-Control-Allow-Origin: *');
+ // header('Content-Type: application/json');
+   header('Access-Control-Allow-Methods: POST');
   header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
  
   include_once '../../config/Database.php';  
@@ -19,10 +19,14 @@
 
   // Get raw posted data
   $data = json_decode(file_get_contents("php://input"));
-
+ 
+  $Signup->firstname=$_POST['firstname'];
+  $Signup->lastname=$_POST['lastname'];
   $Signup->username = $_POST['username'];
   $Signup->email = $_POST['email'];
   $Signup->password = $_POST['password'];
+  $Signup->confirm = $_POST['confirm'];
+
 
  
   //Create post
@@ -30,11 +34,10 @@
 
     header("Location: http://localhost/Temari-dojo/Login.php");
     die();
-    ;
+    
   } else {
-    echo json_encode(
-      array('message' => 'Post Not Created')
-    );
+    echo '<script>alert("Password does not match")
+    window.location.href=`../../../Signup.php`</script>';
  }
 
 ?>
