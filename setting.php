@@ -161,17 +161,16 @@
                         
                          <form class="frm-edit-profile" method="post" action="backend\api\user\updateUserInfoAPI.php">
                              <div class="frm-edit-1">   
-                             <input class="textfield" type="text" name="firstname" placeholder="Firstname"></input>
-                            <input class="textfield" type="text" name="lastname" placeholder="Lastname"></input>
-                            <input class="textfield" type="text" name="username" placeholder="Username"></input>
-                            <input class="textfield" type="email" name="email" placeholder="email"></input>
-                            <input class="textfield" type="text" name="phoneNo" placeholder="Phone number"></input>
+                             <label class = "label1" for="">Firstname:<input class="textfield" type="text" name="firstname" placeholder="Firstname"></input></label>
+                             <label class = "label1" for="">Lastname :<input class="textfield" type="text" name="lastname" placeholder="Lastname"></input>
+                             <label class = "label1" for="">username :<input class="textfield" type="text" name="username" placeholder="Username"></input>
+                             <label class = "label1" for="">email    :<input class="textfield" type="email" name="email" placeholder="email"></input>
+                             <label class = "label1" for="">Telephone:<input class="textfield" type="text" name="phoneNo" placeholder="Phone number"></input>
+                             <label class = "label1" for="">Address  :<input class="textfield" type="text" name="address" placeholder="address"></input>
+                          
                              </div>
                               <div class="frm-edit-2">
-                            <input class="textfield" type="text" name="address" placeholder="address"></input>
-                            <input class="textfield" type="password" name="password" placeholder="password"></input>
-                            <input class="textfield" type="new password" name="password" placeholder="new password"></input>
-                            <input class="textfield" type="password" name="password" placeholder="confirm password"></input>
+                            
                             <input class="textfield textfield-submit" type="submit" name="update" value="update"></input>
                             </div>
                             
