@@ -426,3 +426,11 @@ i{
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
+  .main-div-myprofile-Pic
+  {
+      width: 10%;
+      height: 80%;
+      background-color: #fff;
+      border-radius: 50%;
+      text-align: center;
+  }

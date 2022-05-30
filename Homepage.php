@@ -228,7 +228,7 @@ function renderVid($courseId, $name, $instructor, $Preview_video_link)
 
 
   
-    
+            <script src="js/Homepage.js"></script>
             <script>
                  document.querySelector('.menu').addEventListener('click',function()
                     {
