@@ -1,3 +1,22 @@
+<?php
+
+
+
+include_once 'backend/config/Database.php';
+include_once 'backend/models/Course.php';
+
+function renderVid($courseId, $name, $instructor, $Preview_video_link)
+{
+    echo '<div class="vid">
+            <div class="videocontaint">
+            <iframe width="400" height="200" src=' . $Preview_video_link . ' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p><a href="backend/api/course/course.php?id=' . $courseId . '">' . $name . '</a></p>
+            <p>Instructor: ' . $instructor . '</p>
+        </div>';
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,98 +26,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/Homepage.css">
     <link rel="stylesheet" href="css/search.css">
-    <title>Document</title>
-    <style>
-            @media screen and (max-width:934px){
-    .lessons{
-        justify-content: center;
-    }
-    .search-container{
-        margin-top: 180px;
-        padding: 2ch;
-    }
-    .search-keyword{
-        margin: 1ch;
-        margin-left: 3ch;
-        color: #009866;
-    }
-    .search-resultset{
-        margin: 1ch;
-        margin-left: 3ch;
-    }
-    .lessons{
-        display: flex;
-        justify-content:space-between ;
-        flex-wrap: wrap;
-    }
-    .lesson{
-        background-color: whitesmoke;
-        margin: 2ch;
-        border-radius: 20px;
-        height: 32ch;
-        width: 45ch;
-        overflow: hidden;
-        padding: 1ch;
-    }
-    ul.right
-    {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        list-style: none;
-        margin-right: 40px;
-        height: 1000px;
-        width: 530px;
-        background-color: aliceblue;
-    }
-    .right .menu
-    {
-        position: fixed;
-        top: 12%;
-        left: 85%;
-        display: block;
-        z-index: 100;
-        width: 30px;
-    }
-    ul.right li
-    {
-        margin: 10px 5px;
-        padding: 10px;
-        width: 90%;
-        display: flex;
-        align-items: center;
-    }
-    ul.right li a{
-        color: black;
-        text-decoration: none;
-        font-size: 14px;
-        text-align: center;
-    }
-    .dropdown
-    {
-        position: absolute;
-        top: 1%;
-        left: 2%;
-        z-index: 100;
-    }
-    .dropbtn strong
-    {
-        font-size: 12px;
-    }
-    .dropbtn i{
-        font-size: 11px;
-    }
-}
-    </style>
+    <title>Temari Dojo Search</title>
 </head>
 <body>
 <nav class="nav">
         <ul class="left">
-            <li><img src="./assets/image/chevron_up_29px.png" alt=""><a class='udemy' href="Homepage.php">Temari Dojo</a></li>
-            <li><img src="./assets/image/search_24px.png" alt=""><input type="search" name="search" id="" class="same" placeholder='Search for anything'></li>
+            <li><img src="./assets/image/chevron_up_29px.png" alt=""><a class='udemy' href="#">Temari Dojo</a></li>
+            <li><img src="./assets/image/search_24px.png" alt=""><input type="search" name="search" id="search" class="same" placeholder='Search for anything'></li>
         </ul>
         <ul class="right">
         <img class='menu' src="./assets/image/Menu_50px.png" alt="">
@@ -114,6 +48,15 @@
         </ul>
     </nav>
     <div class="search-container">
+        <div class="filter-category">
+        <select class = "filter-button" onchange = "favTutorial()" >  
+            <option> Categories </option>  
+            <option> w3schools </option>  
+            <option> Javatpoint </option>  
+            <option> tutorialspoint </option>  
+            <option> geeksforgeeks </option>
+        </select>  
+        </div>
         <div class="search-keyword">
             search keyword
         </div>
@@ -127,6 +70,13 @@
                 <p class="instructor">Instructor: <span>Michael Short</span></p>
                 <p class="institution">Institution: <span>MIT</span></p>
             </div>
+            <?php
+            // iterate through the array of courses
+            foreach ($courses_arr['data'] as $course) {
+                renderVid($course['Id'], $course['Name'], $course['Instructor'], $course['Preview_video_link']);
+            }
+            // renderVid('Introduction to golang', 'Fireship', 'https://www.youtube.com/embed/446E-r0rXHI');
+            ?>
         </div>
     </div>
     
@@ -142,6 +92,7 @@
 
 }
     </script>
+<<<<<<< HEAD
     <script>
          
          window.addEventListener('scroll',()=>
@@ -194,5 +145,10 @@
                         }
                     })
     </script>
+=======
+    <script src="js/jquery.js"></script>
+    <script src="js/Homepage.js"></script>
+    <script src="js/categories.js"></script>
+>>>>>>> bfac521b89d96e50cb58a7f11e387c8d2c7a4192
 </body>
 </html>

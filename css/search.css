@@ -57,3 +57,19 @@ iframe{
 .institution span{
     font-weight: bold;
 }
+@media(max-width:934px){
+    .lessons{
+        justify-content: center;
+    }
+}
+.filter-button{
+    float: right;
+    margin-right: 4ch;
+    background-color: transparent;
+    border-radius: 5px;
+    height: 4ch;
+    width: 18ch;
+}
+.filter-button:hover{
+    cursor: pointer;
+}

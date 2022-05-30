@@ -1,6 +1,3 @@
-//fetch username
-
-
 window.onload = function() {
     fetch('http://localhost/Temari-dojo/backend/api/user/loadUserInfoAPI.php')
    .then(response => response.json())
@@ -8,7 +5,7 @@ window.onload = function() {
      document.querySelector("#username").innerHTML = data.username
 
    })
-   .catch(error => console.error(error));
+   .catch(error => console.error(error.message));
 
 }
 
@@ -31,24 +28,6 @@ function myFunction() {
     }
   }
 
-
-function fun7()
-{
-    document.querySelector('.span7').style.width = "100%";
-    document.querySelector('.span7').style.transition = ".5s all linear";
-    document.querySelector('.span2').style.width = "0%";
-    document.querySelector('.span2').style.transition = ".5s all linear";
-    document.querySelector('.span1').style.width = "0%";
-    document.querySelector('.span1').style.transition = ".5s all linear";
-    document.querySelector('.span3').style.width = "0%";
-    document.querySelector('.span3').style.transition = ".5s all linear";
-    document.querySelector('.span4').style.width = "0%";
-    document.querySelector('.span4').style.transition = ".5s all linear";
-    document.querySelector('.span5').style.width = "0%";
-    document.querySelector('.span5').style.transition = ".5s all linear";
-    document.querySelector('.span6').style.width = "0%";
-    document.querySelector('.span6').style.transition = ".5s all linear";
-}
 function fun2()
 {
     document.querySelector('.span2').style.width = "100%";
@@ -80,70 +59,6 @@ function fun1()
     document.querySelector('.span5').style.transition = ".5s all linear";
     document.querySelector('.span6').style.width = "0%";
     document.querySelector('.span6').style.transition = ".5s all linear";
-}
-function fun3()
-{
-    document.querySelector('.span3').style.width = "100%";
-    document.querySelector('.span3').style.transition = ".5s all linear";
-    document.querySelector('.span7').style.transition = ".5s all linear";
-    document.querySelector('.span2').style.width = "0%";
-    document.querySelector('.span2').style.transition = ".5s all linear";
-    document.querySelector('.span1').style.width = "0%";
-    document.querySelector('.span1').style.transition = ".5s all linear";
-    document.querySelector('.span4').style.width = "0%";
-    document.querySelector('.span4').style.transition = ".5s all linear";
-    document.querySelector('.span5').style.width = "0%";
-    document.querySelector('.span5').style.transition = ".5s all linear";
-    document.querySelector('.span6').style.width = "0%";
-    document.querySelector('.span6').style.transition = ".5s all linear";
-}
-function fun4()
-{
-    document.querySelector('.span4').style.width = "100%";
-    document.querySelector('.span4').style.transition = ".5s all linear";
-    document.querySelector('.span7').style.transition = ".5s all linear";
-    document.querySelector('.span2').style.width = "0%";
-    document.querySelector('.span2').style.transition = ".5s all linear";
-    document.querySelector('.span1').style.width = "0%";
-    document.querySelector('.span1').style.transition = ".5s all linear";
-    document.querySelector('.span3').style.width = "0%";
-    document.querySelector('.span3').style.transition = ".5s all linear";
-    document.querySelector('.span5').style.width = "0%";
-    document.querySelector('.span5').style.transition = ".5s all linear";
-    document.querySelector('.span6').style.width = "0%";
-    document.querySelector('.span6').style.transition = ".5s all linear";
-}
-function fun5()
-{
-    document.querySelector('.span5').style.width = "100%";
-    document.querySelector('.span5').style.transition = ".5s all linear";
-    document.querySelector('.span7').style.transition = ".5s all linear";
-    document.querySelector('.span2').style.width = "0%";
-    document.querySelector('.span2').style.transition = ".5s all linear";
-    document.querySelector('.span1').style.width = "0%";
-    document.querySelector('.span1').style.transition = ".5s all linear";
-    document.querySelector('.span3').style.width = "0%";
-    document.querySelector('.span3').style.transition = ".5s all linear";
-    document.querySelector('.span4').style.width = "0%";
-    document.querySelector('.span4').style.transition = ".5s all linear";
-    document.querySelector('.span6').style.width = "0%";
-    document.querySelector('.span6').style.transition = ".5s all linear";
-}
-function fun6()
-{
-    document.querySelector('.span6').style.width = "100%";
-    document.querySelector('.span6').style.transition = ".5s all linear";
-    document.querySelector('.span7').style.transition = ".5s all linear";
-    document.querySelector('.span2').style.width = "0%";
-    document.querySelector('.span2').style.transition = ".5s all linear";
-    document.querySelector('.span1').style.width = "0%";
-    document.querySelector('.span1').style.transition = ".5s all linear";
-    document.querySelector('.span3').style.width = "0%";
-    document.querySelector('.span3').style.transition = ".5s all linear";
-    document.querySelector('.span4').style.width = "0%";
-    document.querySelector('.span4').style.transition = ".5s all linear";
-    document.querySelector('.span5').style.width = "0%";
-    document.querySelector('.span5').style.transition = ".5s all linear";
 }
 // Adding Scroll Event to the Navigation Bar
 window.addEventListener('scroll',()=>
@@ -180,6 +95,3 @@ window.addEventListener('scroll',()=>
     }
     // document.querySelector('.para').innerHTML= scrolled;
 })
-
-
-
