@@ -167,5 +167,10 @@ window.addEventListener('scroll',()=>
     // document.querySelector('.para').innerHTML= scrolled;
 })
 
-
-
+//add id search on all files
+var search = document.getElementById('search');
+search.addEventListener('keypress', function(event){
+    if(event.key='Enter'){
+        console.log('enter');
+    }
+})

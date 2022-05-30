@@ -8,16 +8,6 @@ $db = $database->connect();
 
 $course = new Course($db);
 
-<<<<<<< HEAD
-$result = $course->read();
-$num = $result->rowCount();
-// check for cookie
-if (isset($_COOKIE['user'])) {
-    $user = $_COOKIE['user'];
-} else {
-    $user = 'Guest';
-}
-=======
         $result = $course -> read();
         $num = $result->rowCount();
         // check for cookie
@@ -26,7 +16,6 @@ if (isset($_COOKIE['user'])) {
         }else {
             $user = 'Guest';
         }
->>>>>>> 9775674fa35d421c2c69dfedf36beb54e593a230
 
 //hash username and password
 $user = hash('sha256', $user);
