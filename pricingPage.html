@@ -266,7 +266,18 @@ ul.right li a{
         function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
-  
+  window.onload = function() {
+    fetch('http://localhost/Temari-dojo/backend/api/user/loadUserInfoAPI.php')
+   .then(response => response.json())
+   .then(data => {
+     document.querySelector("#username").innerHTML = data.username
+
+   })
+   .catch(error => console.error(error.message));
+
+}
+
+
   // Close the dropdown menu if the user clicks outside of it
   window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
