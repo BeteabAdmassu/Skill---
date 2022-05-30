@@ -8,7 +8,7 @@ document.querySelector('.daylight').addEventListener('click',function()
         document.querySelector('.image').style.transition = ".5s all linear";
         document.querySelector('.image').style.transform = "translateX(-50%)";
         document.querySelector('.image').src = "assets/image/moon_symbol_50px.png";
-        document.querySelector('.imaged').style.width = "75%";
+        document.querySelector('.imaged').style.width = "60%";
         document.querySelector('.imaged').style.backgroundColor = "#009866";
         document.querySelector('.imaged').style.borderRadius = "30px";
         document.querySelector('.imaged').style.transition = ".5s all linear";

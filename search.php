@@ -8,6 +8,91 @@
     <link rel="stylesheet" href="css/Homepage.css">
     <link rel="stylesheet" href="css/search.css">
     <title>Document</title>
+    <style>
+            @media screen and (max-width:934px){
+    .lessons{
+        justify-content: center;
+    }
+    .search-container{
+        margin-top: 180px;
+        padding: 2ch;
+    }
+    .search-keyword{
+        margin: 1ch;
+        margin-left: 3ch;
+        color: #009866;
+    }
+    .search-resultset{
+        margin: 1ch;
+        margin-left: 3ch;
+    }
+    .lessons{
+        display: flex;
+        justify-content:space-between ;
+        flex-wrap: wrap;
+    }
+    .lesson{
+        background-color: whitesmoke;
+        margin: 2ch;
+        border-radius: 20px;
+        height: 32ch;
+        width: 45ch;
+        overflow: hidden;
+        padding: 1ch;
+    }
+    ul.right
+    {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        list-style: none;
+        margin-right: 40px;
+        height: 1000px;
+        width: 530px;
+        background-color: aliceblue;
+    }
+    .right .menu
+    {
+        position: fixed;
+        top: 12%;
+        left: 85%;
+        display: block;
+        z-index: 100;
+        width: 30px;
+    }
+    ul.right li
+    {
+        margin: 10px 5px;
+        padding: 10px;
+        width: 90%;
+        display: flex;
+        align-items: center;
+    }
+    ul.right li a{
+        color: black;
+        text-decoration: none;
+        font-size: 14px;
+        text-align: center;
+    }
+    .dropdown
+    {
+        position: absolute;
+        top: 1%;
+        left: 2%;
+        z-index: 100;
+    }
+    .dropbtn strong
+    {
+        font-size: 12px;
+    }
+    .dropbtn i{
+        font-size: 11px;
+    }
+}
+    </style>
 </head>
 <body>
 <nav class="nav">
@@ -16,6 +101,7 @@
             <li><img src="./assets/image/search_24px.png" alt=""><input type="search" name="search" id="" class="same" placeholder='Search for anything'></li>
         </ul>
         <ul class="right">
+        <img class='menu' src="./assets/image/Menu_50px.png" alt="">
             <div class="dropdown">
 
 
@@ -56,6 +142,57 @@
 
 }
     </script>
-    <script src="js/Homepage.js"></script>
+    <script>
+         
+         window.addEventListener('scroll',()=>
+                {
+                    const scrolled = window.scrollY;
+                    if(scrolled > 5)
+                    {
+                        document.querySelector('.nav').style.backgroundColor = "#000";
+                        document.querySelector('.udemy').style.color = "#fff";
+                        document.querySelector('.dash').style.color = "#fff";
+                        document.querySelector('.browser').style.color = "#fff";
+                        document.querySelector('.udemy').style.zIndex = "100";
+                        document.querySelector('.nav').style.transition = ".5s all linear";
+                        document.querySelector('.udemy').style.transition = ".5s all linear";
+                        document.querySelector('.letter').style.color = "#fff";
+                        document.querySelector('.log').style.transition = ".5s all linear";
+                        document.querySelector('.sgin').style.border = ".5px solid #fff";
+                        document.querySelector('.sgin').style.transition = ".5s all linear";
+                        document.querySelector('.log').style.border = ".5px solid #fff";
+                    }
+                    else
+                    {
+                        document.querySelector('.nav').style.backgroundColor = "#fff";
+                        document.querySelector('.udemy').style.color = "#000";
+                        document.querySelector('.dash').style.color = "#000";
+                        document.querySelector('.browser').style.color = "#000";
+                        document.querySelector('.nav').style.transition = ".5s all linear";
+                        document.querySelector('.udemy').style.transition = ".5s all linear";
+                        document.querySelector('.log').style.border = ".5px solid #000";
+                        document.querySelector('.letter').style.color = "#000";
+                        document.querySelector('.log').style.transition = ".5s all linear";
+                        document.querySelector('.sgin').style.border = ".5px solid #000";
+                        document.querySelector('.sgin').style.transition = ".5s all linear"
+                    }
+                })
+                document.querySelector('.menu').addEventListener('click',function()
+                    {
+                        if(document.querySelector('.right').style.left === "0%")
+                        {
+                            document.querySelector('.right').style.left = "-130%";
+                            document.querySelector('.right').style.transition = ".5s all linear";
+                            document.querySelector('.menu').style.transition = ".5s all linear";
+                            document.querySelector('.menu').style.left = "5%";
+                        }
+                        else{
+                            document.querySelector('.right').style.left = "0%";
+                            document.querySelector('.right').style.transition = ".5s all linear";
+                            document.querySelector('.menu').style.left = "85%";
+                            document.querySelector('.menu').style.transition = ".5s all linear";
+                        }
+                    })
+    </script>
 </body>
 </html>

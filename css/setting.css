@@ -301,16 +301,6 @@ i{
     text-align: center;
   
 }
-.main-div-myprofile-Pic
-{
-    width: 10%;
-    height: 15vh;
-    background-color: #fff;
-    border-radius: 50%;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    margin-left: 10px;
-}
 .textfield-submit
 {
     background-color: #000;
@@ -370,15 +360,6 @@ i{
     flex-direction: column;
     justify-content:center;
 } 
-.main-div-myprofile-discription
-{
-    color: #5B5E64;
-    margin-top: 20px;
-    
-   
- 
-}
-
 
 /*DropDown*/
 .dropbtn {

@@ -80,6 +80,7 @@
             <li><img src="./assets/image/search_24px.png" alt=""><input type="search" name="search" id="" class="same" placeholder='Search for anything'></li>
         </ul>
         <ul class="right">
+            <img class='menu' src="./assets/image/Menu_50px.png" alt="">
             <li><span></span><a class='dash' href="#">Dashboard</a></li>
             <li><span></span><a class='browser' href="#">Browser</a></li>
             <li class='log'><a class='letter' href="Login.php">Log in</a></li>
@@ -166,6 +167,199 @@
                     <p>&copy;2022 Temari Dojo, Inc.</p>
                 </div>
             </footer>
-        <script src="js/Homepage.js"></script>
+            <script>
+                function fun7()
+            {
+                document.querySelector('.span7').style.width = "100%";
+                document.querySelector('.span7').style.transition = ".5s all linear";
+                document.querySelector('.span2').style.width = "0%";
+                document.querySelector('.span2').style.transition = ".5s all linear";
+                document.querySelector('.span1').style.width = "0%";
+                document.querySelector('.span1').style.transition = ".5s all linear";
+                document.querySelector('.span3').style.width = "0%";
+                document.querySelector('.span3').style.transition = ".5s all linear";
+                document.querySelector('.span4').style.width = "0%";
+                document.querySelector('.span4').style.transition = ".5s all linear";
+                document.querySelector('.span5').style.width = "0%";
+                document.querySelector('.span5').style.transition = ".5s all linear";
+                document.querySelector('.span6').style.width = "0%";
+                document.querySelector('.span6').style.transition = ".5s all linear";
+            }
+            function fun2()
+            {
+                document.querySelector('.span2').style.width = "100%";
+                document.querySelector('.span2').style.transition = ".5s all linear";
+                document.querySelector('.span7').style.width = "0%";
+                document.querySelector('.span7').style.transition = ".5s all linear";
+                document.querySelector('.span1').style.width = "0%";
+                document.querySelector('.span1').style.transition = ".5s all linear";
+                document.querySelector('.span3').style.width = "0%";
+                document.querySelector('.span3').style.transition = ".5s all linear";
+                document.querySelector('.span4').style.width = "0%";
+                document.querySelector('.span4').style.transition = ".5s all linear";
+                document.querySelector('.span5').style.width = "0%";
+                document.querySelector('.span5').style.transition = ".5s all linear";
+                document.querySelector('.span6').style.width = "0%";
+                document.querySelector('.span6').style.transition = ".5s all linear";
+            }
+            function fun1()
+            {
+                document.querySelector('.span1').style.width = "100%";
+                document.querySelector('.span1').style.transition = ".5s all linear";
+                document.querySelector('.span7').style.width = "0%";
+                document.querySelector('.span7').style.transition = ".5s all linear";
+                document.querySelector('.span2').style.width = "0%";
+                document.querySelector('.span2').style.transition = ".5s all linear";
+                document.querySelector('.span3').style.width = "0%";
+                document.querySelector('.span3').style.transition = ".5s all linear";
+                document.querySelector('.span4').style.width = "0%";
+                document.querySelector('.span4').style.transition = ".5s all linear";
+                document.querySelector('.span5').style.width = "0%";
+                document.querySelector('.span5').style.transition = ".5s all linear";
+                document.querySelector('.span6').style.width = "0%";
+                document.querySelector('.span6').style.transition = ".5s all linear";
+            }
+            function fun3()
+            {
+                document.querySelector('.span3').style.width = "100%";
+                document.querySelector('.span3').style.transition = ".5s all linear";
+                document.querySelector('.span7').style.width = "0%";
+                document.querySelector('.span7').style.transition = ".5s all linear";
+                document.querySelector('.span2').style.width = "0%";
+                document.querySelector('.span2').style.transition = ".5s all linear";
+                document.querySelector('.span1').style.width = "0%";
+                document.querySelector('.span1').style.transition = ".5s all linear";
+                document.querySelector('.span4').style.width = "0%";
+                document.querySelector('.span4').style.transition = ".5s all linear";
+                document.querySelector('.span5').style.width = "0%";
+                document.querySelector('.span5').style.transition = ".5s all linear";
+                document.querySelector('.span6').style.width = "0%";
+                document.querySelector('.span6').style.transition = ".5s all linear";
+            }
+            function fun4()
+            {
+                document.querySelector('.span4').style.width = "100%";
+                document.querySelector('.span4').style.transition = ".5s all linear";
+                document.querySelector('.span7').style.width = "0%";
+                document.querySelector('.span7').style.transition = ".5s all linear";
+                document.querySelector('.span2').style.width = "0%";
+                document.querySelector('.span2').style.transition = ".5s all linear";
+                document.querySelector('.span1').style.width = "0%";
+                document.querySelector('.span1').style.transition = ".5s all linear";
+                document.querySelector('.span3').style.width = "0%";
+                document.querySelector('.span3').style.transition = ".5s all linear";
+                document.querySelector('.span5').style.width = "0%";
+                document.querySelector('.span5').style.transition = ".5s all linear";
+                document.querySelector('.span6').style.width = "0%";
+                document.querySelector('.span6').style.transition = ".5s all linear";
+            }
+            function fun5()
+            {
+                document.querySelector('.span5').style.width = "100%";
+                document.querySelector('.span5').style.transition = ".5s all linear";
+                document.querySelector('.span7').style.width = "0%";
+                document.querySelector('.span7').style.transition = ".5s all linear";
+                document.querySelector('.span2').style.width = "0%";
+                document.querySelector('.span2').style.transition = ".5s all linear";
+                document.querySelector('.span1').style.width = "0%";
+                document.querySelector('.span1').style.transition = ".5s all linear";
+                document.querySelector('.span3').style.width = "0%";
+                document.querySelector('.span3').style.transition = ".5s all linear";
+                document.querySelector('.span4').style.width = "0%";
+                document.querySelector('.span4').style.transition = ".5s all linear";
+                document.querySelector('.span6').style.width = "0%";
+                document.querySelector('.span6').style.transition = ".5s all linear";
+            }
+            function fun6()
+            {
+                document.querySelector('.span6').style.width = "100%";
+                document.querySelector('.span6').style.transition = ".5s all linear";
+                document.querySelector('.span7').style.width = "0%";
+                document.querySelector('.span7').style.transition = ".5s all linear";
+                document.querySelector('.span2').style.width = "0%";
+                document.querySelector('.span2').style.transition = ".5s all linear";
+                document.querySelector('.span1').style.width = "0%";
+                document.querySelector('.span1').style.transition = ".5s all linear";
+                document.querySelector('.span3').style.width = "0%";
+                document.querySelector('.span3').style.transition = ".5s all linear";
+                document.querySelector('.span4').style.width = "0%";
+                document.querySelector('.span4').style.transition = ".5s all linear";
+                document.querySelector('.span5').style.width = "0%";
+                document.querySelector('.span5').style.transition = ".5s all linear";
+            }
+
+
+
+                document.querySelector('.menu').addEventListener('click',function()
+                    {
+                        if(document.querySelector('.right').style.left === "0%")
+                        {
+                            document.querySelector('.right').style.left = "-130%";
+                            document.querySelector('.right').style.transition = ".5s all linear";
+                            document.querySelector('.menu').style.transition = ".5s all linear";
+                            document.querySelector('.menu').style.left = "5%";
+                        }
+                        else{
+                            document.querySelector('.right').style.left = "0%";
+                            document.querySelector('.right').style.transition = ".5s all linear";
+                            document.querySelector('.menu').style.left = "85%";
+                            document.querySelector('.menu').style.transition = ".5s all linear";
+                        }
+                    })
+            window.addEventListener('scroll',()=>
+            {
+                const scrolled = window.scrollY;
+                if(scrolled > 5)
+                {
+                    document.querySelector('.nav').style.backgroundColor = "#000";
+                    document.querySelector('.udemy').style.color = "#fff";
+                    document.querySelector('.dash').style.color = "#fff";
+                    document.querySelector('.browser').style.color = "#fff";
+                    document.querySelector('.udemy').style.zIndex = "100";
+                    document.querySelector('.nav').style.transition = ".5s all linear";
+                    document.querySelector('.udemy').style.transition = ".5s all linear";
+                    document.querySelector('.letter').style.color = "#fff";
+                    document.querySelector('.log').style.transition = ".5s all linear";
+                    document.querySelector('.sgin').style.border = ".5px solid #fff";
+                    document.querySelector('.sgin').style.transition = ".5s all linear";
+                    document.querySelector('.log').style.border = ".5px solid #fff";
+                }
+                else
+                {
+                    document.querySelector('.nav').style.backgroundColor = "#fff";
+                    document.querySelector('.udemy').style.color = "#000";
+                    document.querySelector('.dash').style.color = "#000";
+                    document.querySelector('.browser').style.color = "#000";
+                    document.querySelector('.nav').style.transition = ".5s all linear";
+                    document.querySelector('.udemy').style.transition = ".5s all linear";
+                    document.querySelector('.log').style.border = ".5px solid #000";
+                    document.querySelector('.letter').style.color = "#000";
+                    document.querySelector('.log').style.transition = ".5s all linear";
+                    document.querySelector('.sgin').style.border = ".5px solid #000";
+                    document.querySelector('.sgin').style.transition = ".5s all linear"
+                }
+                // document.querySelector('.para').innerHTML= scrolled;
+            })
+            if(screen.width < 500)
+            {
+                
+                window.addEventListener('scroll',()=>
+                {
+                    const scrolled = window.scrollY;
+                        if(scrolled > 5)
+                        {
+                            document.querySelector('.menu').style.display = 'none';
+                        }
+                        else
+                        {
+                            document.querySelector('.menu').style.display = 'block';
+                        }
+                    // document.querySelector('.para').innerHTML= scrolled;
+                })
+            }
+            else{
+                document.querySelector('.menu').style.display = 'none';
+            }
+            </script>
 </body>
 </html>
