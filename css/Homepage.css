@@ -404,6 +404,9 @@ li.search-form{
 .search-form form{
     width: 100%;
 }
+div.lesson{
+    height: 34ch;
+}
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {background-color: #ddd}
   
@@ -712,7 +715,7 @@ li.search-form{
     .videos .vid-box .vid
     {
         width: 300px;
-        height: 200px;
+        height: 300px;
         border: .5px solid #ccc;
         margin: 15px 5px;
         display: flex;
