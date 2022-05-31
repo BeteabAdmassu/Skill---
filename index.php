@@ -72,6 +72,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <title>Temari-Dojo</title>
+    <style>
+        .right li:nth-of-type(2)
+        {
+            display: flex;
+            align-items: center;
+            justify-content: ceil;
+        }
+        .right li:nth-of-type(2) img
+        {
+            width: 15px;
+            margin-right: 5px;
+        }
+    </style>
 </head>
 <body>
     <nav class="nav">
@@ -82,7 +95,7 @@
         <ul class="right">
             <img class='menu' src="./assets/image/Menu_50px.png" alt="">
             <li><span></span><a class='dash' href="#">Dashboard</a></li>
-            <li><span></span><a class='browser' href="#">Browser</a></li>
+            <li><span></span><img src="./assets/image/star_28px.png" alt=""><a class='browser' href="Reviewrs.html">Reviewers</a></li>
             <li class='log'><a class='letter' href="Login.php">Log in</a></li>
             <li class='sgin'><a href="Signup.php">Sign Up</a></li>
             <!-- <li><abbr title="User Account"><img src="./assets/image/user_50px.png" alt=""></abbr></li> -->
@@ -360,6 +373,11 @@
             else{
                 document.querySelector('.menu').style.display = 'none';
             }
+            document.addEventListener('DOMContentLoaded',()=>
+                {
+                    document.querySelector('.right').style.left = "-130%";
+                    document.querySelector('.menu').style.left = "3%";
+                })
             </script>
 </body>
 </html>
