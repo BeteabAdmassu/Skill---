@@ -132,6 +132,31 @@ function renderVid($courseId, $name, $instructor,$institute, $Preview_video_link
             width: 80%;
             margin: 1% auto;
         }
+        @media screen and (max-width: 560px) {
+            .text
+            {
+                width: 480px;
+                height: 180px;
+                background-color: white;
+                padding: 1%;
+                margin-top: 5%;
+            }
+            .text p
+            {
+                width: 300px;
+                font-size: 13px;
+            }
+            .text h1
+            {
+                margin: 10px 0;
+                font-size: 16px;
+                margin-top: 10%;
+            }
+            /* .dropbtn
+            {
+                display: none;
+            } */
+        }
     </style>
 </head>
 
@@ -233,7 +258,7 @@ function renderVid($courseId, $name, $instructor,$institute, $Preview_video_link
                             document.querySelector('.right').style.left = "-130%";
                             document.querySelector('.right').style.transition = ".5s all linear";
                             document.querySelector('.menu').style.transition = ".5s all linear";
-                            document.querySelector('.menu').style.left = "5%";
+                            document.querySelector('.menu').style.left = "3%";
                         }
                         else{
                             document.querySelector('.right').style.left = "0%";
@@ -288,6 +313,11 @@ function renderVid($courseId, $name, $instructor,$institute, $Preview_video_link
                             document.querySelector('.menu').style.display = 'block';
                         }
                     // document.querySelector('.para').innerHTML= scrolled;
+                })
+                document.addEventListener('DOMContentLoaded',()=>
+                {
+                    document.querySelector('.right').style.left = "-130%";
+                    document.querySelector('.menu').style.left = "3%";
                 })
             </script>
       
