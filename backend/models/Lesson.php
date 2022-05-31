@@ -42,9 +42,6 @@
          // prepare statement
          $stmt = $this->conn->prepare($query);
 
-            // clean data
-        // $this->chapterId = htmlspecialchars(strip_tags($this->chapterId));
-
             // bind dat
         $stmt->bindParam(':textID', $textId);
 
@@ -56,6 +53,25 @@
 
         // return the text only
         return $row[0]['Text'];
+     }
+
+     public function getLessonVideo($textId) {
+         $query = 'SELECT Video_link FROM lesson_text where ID = :textID';
+
+         // prepare statement
+         $stmt = $this->conn->prepare($query);
+
+            // bind dat
+        $stmt->bindParam(':textID', $textId);
+
+
+            // execute query
+        $stmt->execute();
+
+        $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        // return the text only
+        return $row[0]['Video_link'];
      }
     
 }  

@@ -52,31 +52,14 @@
 <body>
     <nav class="nav">
         <ul class="left">
-
-            <li><img src="./assets/image/chevron_up_29px.png" alt=""><a class='udemy' href="#">Temari Dojo</a></li>
-            <li><img src="./assets/image/search_24px.png" alt=""><input type="search" name="search" id="" class="same" placeholder='Search for anything'></li>
-
-            <li><img src="./assets/image/chevron_up_29px.png" alt=""><a class='udemy' href="Homepage.php">Temari Dojo</a></li>
-            <li class='search-form'>
-            <form action="backend/api/course/searchcourse.php" method="get">
-                <img src="./assets/image/search_24px.png" alt=""><input type="search" name="search" id="search" class="same" placeholder='Search for anything'>
-            </form>
-            </li>
-
-            
+            <li><img src="../../../assets/image/image/chevron_up_29px" alt=""><a class='udemy' href="#">Temari Dojo</a></li>
         </ul>
         <ul class="right">
-        <img class='menu' src="./assets/image/Menu_50px.png" alt="">
-            <div class="dropdown">
-
-
-                <button onclick="myFunction()" class="dropbtn" id="username">Username<i class="fa-solid fa-user usericon"></i> </button>
-                <div id="myDropdown" class="dropdown-content">
-                    <a class="myDropdown-a1" href="setting.php"><i class="fa-solid fa-user-pen usericon2"></i>Edit Profile</a>
-                    <a class="myDropdown-a1" href="Login.php"><i class="fa-solid fa-arrow-right-from-bracket usericon2"></i>Logout</a>
-
-                </div>
-            </div>
+            <li><span></span><a class='dash' href="#">Dashboard</a></li>
+            <li><span></span><a class='browser' href="#">Browser</a></li>
+            <li class='log'><a class='letter' href="#">Log in</a></li>
+            <li class='sign'><a href="#">Sign Up</a></li>
+            <li><abbr title="User Account"><img src="./image/user_50px" alt=""></abbr></li>
         </ul>
     </nav>
 
@@ -88,10 +71,14 @@
                 ?>
 
                 <div class="LessonVideo">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/OEWXbpUMODk"
+                    <?php 
+                    echo '
+                    <iframe width="100%" height="100%" src="'.$lessonFromDb -> getLessonVideo($currrentCourseId).'"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                        allowfullscreen>
+                    </iframe>';
+                    ?>
                 </div>
             </div>
             <div class="Lesson-Content">
@@ -99,24 +86,6 @@
                 <h1 class="lessonTitle">
                     <?php echo $lessonTitle; ?>
                 </h1>
-                <!-- <p class="lessonText">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sit consequuntur quis ipsa
-                    laudantium ut iste libero, nam sequi cumque vitae reprehenderit est vel pariatur, molestiae aliquid
-                    at doloremque. Alias, quisquam id quas sunt beatae harum natus ipsam dignissimos recusandae
-                    corporis, nulla nihil modi dolore dolorem itaque unde. A ex eveniet laborum delectus optio sint
-                    pariatur iste numquam omnis atque inventore accusantium in, mollitia, quidem ad! Ea consectetur ab
-                    odio obcaecati aut dicta corrupti! Ipsam, vel odio sed praesentium maxime repellat incidunt animi
-                    cumque nisi ex perspiciatis ratione ab beatae cum consectetur quaerat vero tenetur saepe
-                    accusantium. In incidunt voluptatibus aspernatur aperiam repudiandae fugit commodi distinctio
-                    corporis molestiae cum, corrupti, quidem deleniti pariatur quos minus necessitatibus, quo voluptatem
-                    modi rerum veritatis. Nobis sed molestias vitae corporis aliquam magnam accusantium assumenda
-                    officiis aspernatur pariatur, deserunt beatae laboriosam, quo repudiandae officia provident eum quis
-                    adipisci architecto similique ab corrupti, distinctio tempora asperiores. Voluptas dolore, sed
-                    deserunt, ullam distinctio, facilis earum quis quas nesciunt ab numquam laboriosam ducimus modi a
-                    quidem quaerat optio quibusdam dolorem repellat accusamus doloremque voluptatem laborum tempore.
-                    Recusandae quod, exercitationem illum sapiente atque magni et corrupti dicta facere laborum impedit
-                    veritatis. Molestias eum, reprehenderit quos vero corrupti illum! Voluptates.
-                </p> -->
                 <?php 
                     echo '<p class="lessonText">'.$lessonFromDb -> getLessonText($currrentCourseId).'</p>';
                 ?>
