@@ -50,15 +50,15 @@ if ($num > 0) {
 
 
 
-function renderVid($courseId, $name, $instructor, $Preview_video_link)
+function renderVid($courseId, $name, $instructor,$institute, $Preview_video_link)
 {
-    echo '<div class="vid">
-            <div class="videocontaint">
-            <iframe width="400" height="200" src=' . $Preview_video_link . ' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <p><a href="backend/api/course/course.php?id=' . $courseId . '">' . $name . '</a></p>
-            <p>Instructor: ' . $instructor . '</p>
-        </div>';
+    echo '<div class="lesson">
+                <iframe width="400" height="200" src=' . $Preview_video_link . ' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <p class="course-name"><a href="backend/api/course/course.php?id=' . $courseId . '">' . $name . '</a></p>
+                <p class="instructor">Instructor: <span>' . $instructor . '</span></p>
+                <p class="institution">Institution: <span>'.$institute.'</span></p>
+            </div>';
 }
 
 
@@ -72,6 +72,7 @@ function renderVid($courseId, $name, $instructor, $Preview_video_link)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/Homepage.css">
+    <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
@@ -215,15 +216,10 @@ function renderVid($courseId, $name, $instructor, $Preview_video_link)
             <?php
             // iterate through the array of courses
             foreach ($courses_arr['allcourses'] as $course) {
-                renderVid($course['Id'], $course['Name'], $course['Instructor'], $course['Preview_video_link']);
+                renderVid($course['Id'], $course['Name'], $course['Instructor'],$course['Institute'], $course['Preview_video_link']);
             }
             // renderVid('Introduction to golang', 'Fireship', 'https://www.youtube.com/embed/446E-r0rXHI');
             ?>
-            <div class="vid">
-                <div class="videocontaint">
-
-                </div>
-            </div>
 
         </div>
     </div>
@@ -253,7 +249,7 @@ function renderVid($courseId, $name, $instructor, $Preview_video_link)
 
 
   
-    
+            <script src="js/Homepage.js"></script>
             <script>
                  document.querySelector('.menu').addEventListener('click',function()
                     {

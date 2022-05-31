@@ -278,7 +278,7 @@ i{
 }
 .textfield
 {
-    width: 100%;
+    width: 80%;
     height: 7vh;
     background-color: #fff;
     color: #000;
@@ -350,6 +350,7 @@ i{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: right;
 }
 .frm-edit-2
 {
@@ -358,8 +359,9 @@ i{
     text-align: right;
     display: flex;
     flex-direction: column;
-    justify-content:center;
-} 
+    justify-content: end;
+}
+
 
 /*DropDown*/
 .dropbtn {
@@ -371,6 +373,12 @@ i{
     cursor: pointer;
   
   } 
+  .label1
+  {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+  }
   
   /* Dropdown button on hover & focus */
  
@@ -426,3 +434,11 @@ i{
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
+  .main-div-myprofile-Pic
+  {
+      width: 10%;
+      height: 80%;
+      background-color: #fff;
+      border-radius: 50%;
+      text-align: center;
+  }

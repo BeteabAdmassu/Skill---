@@ -5,7 +5,7 @@
     
     $chapterid = $_GET['chapterid'];
     $chaptername = $_GET['chaptername'];
-    $lesson = $_GET['lesson'];
+    $lessonTitle = $_GET['lesson'];
 
 
     // Instantiate Database
@@ -21,9 +21,17 @@
     while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
         $lesson_item = array(
+            'ID' => $ID,
             'Lesson_title' => $Lesson_title
         );
         array_push($lessons, $lesson_item);
+    }
+
+    $currrentCourseId;
+    foreach($lessons as $lesson) {
+        if(strcmp($lesson['Lesson_title'], $lessonTitle) == 0) {
+            $currrentCourseId = $lesson['ID'];
+        }
     }
 ?>
 
@@ -35,6 +43,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temari Dojo Lesson</title>
+    <link rel="stylesheet" href="../../../css/Homepage.css">
     <link rel="stylesheet" href="../../../css/Lesson.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -43,14 +52,31 @@
 <body>
     <nav class="nav">
         <ul class="left">
-            <li><img src="../../../assets/image/image/chevron_up_29px" alt=""><a class='udemy' href="#">Temari Dojo</a></li>
+
+            <li><img src="./assets/image/chevron_up_29px.png" alt=""><a class='udemy' href="#">Temari Dojo</a></li>
+            <li><img src="./assets/image/search_24px.png" alt=""><input type="search" name="search" id="" class="same" placeholder='Search for anything'></li>
+
+            <li><img src="./assets/image/chevron_up_29px.png" alt=""><a class='udemy' href="Homepage.php">Temari Dojo</a></li>
+            <li class='search-form'>
+            <form action="backend/api/course/searchcourse.php" method="get">
+                <img src="./assets/image/search_24px.png" alt=""><input type="search" name="search" id="search" class="same" placeholder='Search for anything'>
+            </form>
+            </li>
+
+            
         </ul>
         <ul class="right">
-            <li><span></span><a class='dash' href="#">Dashboard</a></li>
-            <li><span></span><a class='browser' href="#">Browser</a></li>
-            <li class='log'><a class='letter' href="#">Log in</a></li>
-            <li class='sign'><a href="#">Sign Up</a></li>
-            <li><abbr title="User Account"><img src="./image/user_50px" alt=""></abbr></li>
+        <img class='menu' src="./assets/image/Menu_50px.png" alt="">
+            <div class="dropdown">
+
+
+                <button onclick="myFunction()" class="dropbtn" id="username">Username<i class="fa-solid fa-user usericon"></i> </button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a class="myDropdown-a1" href="setting.php"><i class="fa-solid fa-user-pen usericon2"></i>Edit Profile</a>
+                    <a class="myDropdown-a1" href="Login.php"><i class="fa-solid fa-arrow-right-from-bracket usericon2"></i>Logout</a>
+
+                </div>
+            </div>
         </ul>
     </nav>
 
@@ -71,9 +97,9 @@
             <div class="Lesson-Content">
 
                 <h1 class="lessonTitle">
-                    <?php echo $lesson; ?>
+                    <?php echo $lessonTitle; ?>
                 </h1>
-                <p class="lessonText">
+                <!-- <p class="lessonText">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sit consequuntur quis ipsa
                     laudantium ut iste libero, nam sequi cumque vitae reprehenderit est vel pariatur, molestiae aliquid
                     at doloremque. Alias, quisquam id quas sunt beatae harum natus ipsam dignissimos recusandae
@@ -90,7 +116,10 @@
                     quidem quaerat optio quibusdam dolorem repellat accusamus doloremque voluptatem laborum tempore.
                     Recusandae quod, exercitationem illum sapiente atque magni et corrupti dicta facere laborum impedit
                     veritatis. Molestias eum, reprehenderit quos vero corrupti illum! Voluptates.
-                </p>
+                </p> -->
+                <?php 
+                    echo '<p class="lessonText">'.$lessonFromDb -> getLessonText($currrentCourseId).'</p>';
+                ?>
             </div>
         </div>
         <nav class="Lessons-nav">
@@ -108,7 +137,7 @@
             </ol>
         </nav>
     </div>
-
+<script src="../../../js/Homepage.js"></script>
 </body>
 
 </html>

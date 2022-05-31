@@ -18,7 +18,7 @@
         }
 
      public function getLessons($cid) {
-         $query = 'SELECT Lesson_title FROM lesson_content where ChapterID = :chapterId ORDER BY Lesson_number';
+         $query = 'SELECT Lesson_title, ID FROM lesson_content where ChapterID = :chapterId ORDER BY Lesson_number';
 
          // prepare statement
             $stmt = $this->conn->prepare($query);
@@ -26,7 +26,7 @@
             // clean data
             $this->chapterId = htmlspecialchars(strip_tags($this->chapterId));
 
-            // bind data
+            // bind dat
             $stmt->bindParam(':chapterId', $cid);
 
 
@@ -34,6 +34,28 @@
             $stmt->execute();
 
             return $stmt;
+     }
+
+     public function getLessonText($textId) {
+         $query = 'SELECT Text FROM lesson_text where ID = :textID';
+
+         // prepare statement
+         $stmt = $this->conn->prepare($query);
+
+            // clean data
+        // $this->chapterId = htmlspecialchars(strip_tags($this->chapterId));
+
+            // bind dat
+        $stmt->bindParam(':textID', $textId);
+
+
+            // execute query
+        $stmt->execute();
+
+        $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        // return the text only
+        return $row[0]['Text'];
      }
     
 }  
