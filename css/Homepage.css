@@ -405,7 +405,9 @@ li.search-form{
     width: 100%;
 }
 div.lesson{
+    overflow:initial;
     height: 34ch;
+    width: 45ch;
 }
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {background-color: #ddd}
